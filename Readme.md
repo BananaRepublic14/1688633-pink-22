@@ -1,7 +1,7 @@
-# Личный проект «Пинк» 
+# Личный проект «Пинк»
 
-* Студент: [Эльдар Мендигужаев](https://up.htmlacademy.ru/adaptive/22/user/1688633).
-* Наставник: `Неизвестно`.
+- Студент: [Эльдар Мендигужаев](https://up.htmlacademy.ru/adaptive/22/user/1688633).
+- Наставник: [Максим Петрищак](https://htmlacademy.ru/profile/maksim_petrishchak).
 
 ---
 
