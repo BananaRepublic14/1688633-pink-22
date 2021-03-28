@@ -62,11 +62,11 @@
           <div class="container">
             <div class="form__user-data">
               <label class="form__label" for="name-id">Фамилия:</label><br>
-              <input class="form__field" type="text" name="name" id="name-id" placeholder="Укажите фамилию *">
+              <input class="form__field" type="text" name="surname" id="surname-id" placeholder="Укажите фамилию *" required>
             </div>
             <div class="form__user-data">
               <label class="form__label" for="surname-id">Имя:</label><br>
-              <input class="form__field" type="text" name="surname" id="surname-id" placeholder="Укажите Ваше имя *">
+              <input class="form__field" type="text" name="name" id="name-id" placeholder="Укажите Ваше имя *" required>
             </div>
             <div class="form__user-data">
               <label class="form__label" for="patronymic-id">Отчество:</label><br>
@@ -77,34 +77,32 @@
 
         <div class="form__achievement-wrapper">
           <div class="container">
-            <fieldset class="form-fieldset">
-              <legend class="form-fieldset__text">Ваши безбашенные достижения в путешествии</legend>
-              <ul class="form-fieldset__list">
-                <li class="form-fieldset__item">
-                  <input class="visually-hidden form-fieldset__input-checkbox" type="checkbox" name="achievement-1" id="achievement-1-id"
+            <fieldset class="form__fieldset">
+              <legend class="form__fieldset__legend">Ваши безбашенные достижения в путешествии</legend>
+              <ul class="form__fieldset-list">
+                <li class="form__fieldset-item">
+                  <input class="visually-hidden form__fieldset-input-checkbox" type="checkbox" name="achievement-1" id="achievement-1-id"
                     checked>
                   <label for="achievement-1-id">Сделал селфи с акулой</label>
                 </li>
-                <li class="form-fieldset__item">
-                  <input class="visually-hidden form-fieldset__input-checkbox" type="checkbox" name="achievement-2" id="achievement-2-id"
-                    checked>
+                <li class="form__fieldset-item">
+                  <input class="visually-hidden form__input-checkbox" type="checkbox" name="achievement-2" id="achievement-2-id" checked>
                   <label for="achievement-2-id">Обгорел на пляже</label>
                 </li>
-                <li class="form-fieldset__item">
-                  <input class="visually-hidden form-fieldset__input-checkbox" type="checkbox" name="achievement-3" id="achievement-3-id">
+                <li class="form__fieldset-item">
+                  <input class="visually-hidden form__input-checkbox" type="checkbox" name="achievement-3" id="achievement-3-id">
                   <label for="achievement-3-id">Видел Чака Норриса</label>
                 </li>
-                <li class="form-fieldset__item">
-                  <input class="visually-hidden form-fieldset__input-checkbox" type="checkbox" name="achievement-4" id="achievement-4-id">
+                <li class="form__fieldset-item">
+                  <input class="visually-hidden form__input-checkbox" type="checkbox" name="achievement-4" id="achievement-4-id">
                   <label for="achievement-4-id">Накупил сувениров</label>
                 </li>
-                <li class="form-fieldset__item">
-                  <input class="visually-hidden form-fieldset__input-checkbox" type="checkbox" name="achievement-5" id="achievement-5-id"
-                    checked>
+                <li class="form__fieldset-item">
+                  <input class="visually-hidden form__input-checkbox" type="checkbox" name="achievement-5" id="achievement-5-id" checked>
                   <label for="achievement-2-id">Удержал башню</label>
                 </li>
-                <li class="form-fieldset__item">
-                  <input class="visually-hidden form-fieldset__input-checkbox" type="checkbox" name="achievement-6" id="achievement-6-id">
+                <li class="form__fieldset-item">
+                  <input class="visually-hidden form__fieldset-input-checkbox" type="checkbox" name="achievement-6" id="achievement-6-id">
                   <label for="achievement-6-id">Разгромил отель</label>
                 </li>
               </ul>
@@ -114,8 +112,8 @@
 
         <div class="form__contacts-wrapper">
           <div class="container">
-            <fieldset class="form-fieldset">
-              <legend class="form-fieldset__text">Контактная информация</legend>
+            <fieldset class="form__fieldset">
+              <legend class="form__fieldset__legend">Контактная информация</legend>
               <div class="form__contacts-info">
                 <input class="form__field" type="tel" name="tel" id="tel-id" pattern="+7[0-9]{3}-[0-9]{3}-[0-9]{3}"
                   placeholder="Номер, пожалуйста"><br>
@@ -131,19 +129,19 @@
 
         <div class="form__radiobox-wrapper">
           <div class="container">
-            <fieldset class="form-fieldset">
-              <legend class="form-fieldset__text">С каким приложением путешествовали?</legend>
+            <fieldset class="form__fieldset">
+              <legend class="form__fieldset__legend">С каким приложением путешествовали?</legend>
               <div class="form__radiobox">
-                <input class="visually-hidden form__input-radio" type="radio" name="radio" value="iOS" id="iOS-id" checked>
-                <label for="iOS-id">Pink для iOS</label>
+                <input class="visually-hidden form__input-radio" type="radio" name="radio" value="ios" id="ios-id" checked>
+                <label for="ios-id">Pink для iOS</label>
               </div>
               <div class="form__radiobox">
-                <input class="visually-hidden form__input-radio" type="radio" name="radio" value="Android" id="Android-id">
-                <label for="Android-id">Pink на Android</label>
+                <input class="visually-hidden form__input-radio" type="radio" name="radio" value="android" id="android-id">
+                <label for="android-id">Pink на Android</label>
               </div>
               <div class="form__radiobox">
-                <input class="visually-hidden form__input-radio" type="radio" name="radio" value="Windows" id="Windows-id">
-                <label for="Windows-id">Windows Phone</label>
+                <input class="visually-hidden form__input-radio" type="radio" name="radio" value="windows" id="windows-id">
+                <label for="windows-id">Windows Phone</label>
               </div>
             </fieldset>
           </div>
@@ -151,8 +149,8 @@
 
         <div class="form__textarea-wrapper">
           <div class="container">
-            <fieldset class="form-fieldset">
-              <legend class="form-fieldset__text">Опишите свои эмоции</legend>
+            <fieldset class="form__fieldset">
+              <legend class="form__fieldset__legend">Опишите свои эмоции</legend>
               <div class="form__textarea-text">
                 <label class="form__textarea-label" for="text-field"></label><br>
                 <textarea class="form__textarea" name="text" id="text-field" placeholder="Можно прям в красках, не стесняясь в выражениях"
@@ -163,7 +161,7 @@
         </div>
 
         <button class="button button--send" type="submit">Отправить</button>
-        <small class="form__legend form__legend--position">
+        <small class="form__legend form__note">
           * — обязательные поля
         </small>
       </form>
