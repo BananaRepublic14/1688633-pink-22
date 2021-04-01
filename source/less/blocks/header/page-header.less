@@ -1,34 +1,32 @@
 .page-header {
   min-width: 320px;
   margin: 0 auto;
-  background: url("../../img/iphone--mobile.png") 0 175px no-repeat,
-    url("../../img/bg-header--mobile.png") 0 0 no-repeat;
+  background: url("../../img/iphone--mobile.png") no-repeat 0 175px / auto,
+    url("../../img/bg-header--mobile.png") no-repeat 0 0 / auto;
   background-color: var(--basic-extra-dark-2);
-  // .page-header__logo
-  &__logo {
-    min-width: 70px;
+
+  &--form {
+    background: url("../../img/bg-header--mobile.png") no-repeat 0 0 / auto;
   }
+}
+
+.page-header__logo {
+  min-width: 70px;
 }
 
 .main-navigation {
   line-height: 33px;
   font-weight: 700;
   text-transform: uppercase;
-  // // .main-navigation__toggle
-  // &__toggle {
-  // }
+}
 
-  // // .main-navigation__list
-  // &__list {
-  // }
+.main-navigation__link {
+  color: var(--basic-white);
+}
 
-  // .main-navigation__item
-  &__item {
-    list-style: none;
-  }
-
-  // .main-navigation__link
-  &__link {
-    color: var(--basic-white);
-  }
+.page-header__title {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 33px;
+  color: var(--basic-white);
 }
