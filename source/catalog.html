@@ -10,7 +10,7 @@
   <link rel="manifest" href="manifest.webmanifest">
 </head>
 
-<body class="page__catalog">
+<body class="page-catalog">
   <header class="page-header">
     <h1 class="visually-hidden">Сайт мобильного приложения «PINK»</h1>
 
@@ -66,9 +66,9 @@
                 <p class="catalog-photo__avtor-name">Анна</p>
                 <cite class="catalog-photo__text">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в
                   перископе, задавайте свои вопросы!</cite>
-                <div class="like-wrapper">
-                  <p class="like">Нравится:<span class="timeout"></span></p>
-                  <button class="button-likes" type="button"><span class="likes-number"></span></button>
+                <div class="catalog-photo__stats">
+                  <p class="catalog-photo__likes">Нравится:<span class="timeout"></span></p>
+                  <button class="catalog-photo__like-buttton" type="button"><span class="likes-number"></span></button>
                 </div>
               </blockquote>
             </li>
@@ -160,7 +160,6 @@
               <div class="workshop-form__download-photo">
                 <p>Выберите изображение для поста:</p>
                 <input type="file" name="photo">
-                <input type="submit" value="Загрузить">
               </div>
 
               <div class="workshop-form__controls-one">
@@ -191,8 +190,8 @@
               </div>
 
               <div class="workshop-form__workshop-toggles">
-                <button class="workshop-form__workshop-toggle" type="button">Запостить</button>
-                <button class="workshop-form__workshop-toggle  workshop-form__workshop-toggle--disabled" type="button">Отмена</button>
+                <button class="workshop-form__workshop-toggle" type="submit">Запостить</button>
+                <button class="workshop-form__workshop-toggle  workshop-form__workshop-toggle--disabled" type="reset">Отмена</button>
               </div>
             </fieldset>
           </form>
