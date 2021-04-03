@@ -1,0 +1,30 @@
+.range-controls {
+  height: 60px;
+  position: relative;
+  padding: 35px 20px;
+  background-color: var(--basic-gray);
+  display: none;
+
+  &--current {
+    display: block;
+  }
+}
+
+.range-controls .scale {
+  width: 240px;
+  height: 2px;
+  background: var(--basic-extra-dark);
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 29px;
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  border: 2px solid var(--basic-pink);
+  background-color: var(--basic-white);
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
