@@ -1,0 +1,133 @@
+// Form
+
+.form__title {
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.form__label {
+  font-size: 14px;
+  line-height: 30px;
+  color: var(--basic-pink);
+  text-transform: uppercase;
+}
+
+.form__field {
+  width: 275px;
+  height: 60px;
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--basic-extra-dark);
+  border: 2px solid var(--basic-extra-gray);
+  border-radius: 1px;
+  padding: 10px;
+}
+
+.form__fieldset {
+  border: 0 none;
+}
+
+.form__legend {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-pink);
+}
+
+.form__fieldset-item {
+  font-size: 18px;
+  line-height: 30px;
+  margin: 0 0 65px 0;
+
+  & label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+// Form_achievement
+
+.form__achievement {
+  background-color: var(--basic-gray);
+}
+
+.form__fieldset-input-checkbox {
+  & label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  & + label::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -50px;
+    width: 35px;
+    height: 35px;
+    background-color: var(--basic-white);
+    border: 2px solid var(--basic-extra-gray);
+  }
+
+  &:checked + label::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -42px;
+    width: 20px;
+    height: 16px;
+    background: url("../../img/svg-img/check-mark.svg") 0 0 no-repeat;
+  }
+}
+
+// Form contacts
+
+// Form radiobox
+
+.form__radiobox {
+  background-color: var(--basic-gray);
+}
+
+.form__radiobox-input {
+  & + label::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -50px;
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    border: 2px solid var(--basic-extra-gray);
+    background-color: var(--basic-white);
+  }
+
+  &:checked + label::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: -39px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--basic-pink);
+  }
+}
+
+// Form textarea
+
+.form__textarea-field {
+  width: 100%;
+  font-size: 18px;
+  line-height: 30px;
+  resize: none;
+  border: 2px solid var(--basic-extra-gray);
+  border-radius: 1px;
+  padding: 10px;
+}
