@@ -9,6 +9,7 @@
   <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicon/favicon-180.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body class="page-body">
@@ -16,43 +17,52 @@
     <h1 class="visually-hidden">Сайт мобильного приложения «PINK»</h1>
 
     <div class="container">
-      <a class="page-header__logo">
-        <img src="img/logo/logo-header.svg" width="74" height="23" alt="Логотип сайта мобильного приложения «PINK»">
-      </a>
+      <div class="page-header__wrapper">
+        <a class="page-header__logo">
+          <img class="page-header__image-mobile" src="img/logo/logo-mobile.svg" width="74" height="23"
+            alt="Логотип сайта мобильного приложения «PINK»">
+          <img class="page-header__image-tablet" src="img/logo/logo-tablet.svg" width="145" height="40"
+            alt="Логотип сайта мобильного приложения «PINK»">
+          <img class="page-header__image-desktop" src="img/logo/logo-header-desktop.svg" width="147" height="23"
+            alt="Логотип сайта мобильного приложения «PINK»">
+        </a>
 
-      <nav class="main-navigation">
-        <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <nav class="main-navigation">
+          <ul class="main-navigation__list list-reset">
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="#">
+                Главная
+              </a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="catalog.html">
+                Фотографии
+              </a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="form.html">
+                Конкурс
+              </a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="https://htmlacademy.ru/" target="_blank">
+                HTML Academy
+              </a>
+            </li>
+          </ul>
 
-        <ul class="main-navigation__list list-reset">
-          <li class="main-navigation__item">
-            <a class="main-navigation__link" href="#">
-              Главная
-            </a>
-          </li>
-          <li class="main-navigation__item">
-            <a class="main-navigation__link" href="catalog.html">
-              Фотографии
-            </a>
-          </li>
-          <li class="main-navigation__item">
-            <a class="main-navigation__link" href="form.html">
-              Конкурс
-            </a>
-          </li>
-          <li class="main-navigation__item">
-            <a class="main-navigation__link" href="https://htmlacademy.ru/" target="_blank">
-              HTML Academy
-            </a>
-          </li>
-        </ul>
-      </nav>
+          <div class="main-navigation__toggle">
+            <button type="button"><span class="visually-hidden">Открыть меню</span></button>
+          </div>
+        </nav>
+      </div>
     </div>
 
     <section class="promo-app">
       <h2 class="visually-hidden">Скачать мобильное приложение «PINK»</h2>
 
       <div class="container">
-        <h3 class="promo-app__title section-title">Взгляните на жизнь иначе!</h3>
+        <h2 class="promo-app__title">Взгляните на жизнь иначе!</h2>
         <button class="button-index promo-app__button" type="button">Скачать приложение</button>
         <ul class="promo-app__list list-reset">
           <li class="promo-app__item">
@@ -71,43 +81,61 @@
             </a>
           </li>
         </ul>
-        <p class="promo-app__text text-paragraph">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        <p class="promo-app__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
       </div>
     </section>
   </header>
 
   <main class="page-main">
+
     <section class="presentation-app">
       <h2 class="visually-hidden">Опции мобильного приложения «PINK»</h2>
 
       <div class="container">
-        <h3 class="presentation-app__text">Устали от серости<br>мегаполиса?<br>Нам есть, что вам<br>предложить!</h3>
+        <p class="presentation-app__title">Устали от серости мегаполиса?<br><br class="presentation-app__br--mobile">Нам есть, что вам<br>
+          предложить!
+        </p>
+
         <ul class="presentation-app__item list-reset">
           <li class="presentation-app__list">
             <img class="presentation-app__image" src="img/iphone--screen-1.png" width="157" height="320"
               alt="Иллюстрация опций мобильного приложения «PINK»">
-            <b class="presentation-app__title">Поднимает настроение</b>
+            <h4 class="presentation-app__subtitle">Поднимает настроение</h4>
             <p class="presentation-app__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько
               кликов!</p>
           </li>
           <li class="presentation-app__list">
             <img class="presentation-app__image" src="img/iphone--screen-2.png" width="157" height="320"
               alt="Иллюстрация опций мобильного приложения «PINK»">
-            <h3 class="presentation-app__title">Меняет мир
-              вокруг</h3>
-            <p class="presentation-app__description">Сделайте снимок и
-              украсьте его смайликом
-              или текстовой подписью, чтобы усилить эффект</p>
+            <h4 class="presentation-app__subtitle">Меняет мир вокруг</h4>
+            <p class="presentation-app__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+            </p>
           </li>
           <li class="presentation-app__list">
             <img class="presentation-app__image presentation-app__image--current" src="img/iphone--screen-3.png" width="157" height="320"
               alt="Иллюстрация опций мобильного приложения «PINK»">
-            <h3 class="presentation-app__title">Заводит
-              новых друзей</h3>
+            <h4 class="presentation-app__subtitle">Заводит новых друзей</h4>
             <p class="presentation-app__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями
               и заводите новых</p>
           </li>
         </ul>
+
+        <!-- <div class="presentation-app__images">
+          <ul class="presentation-app__item list-reset">
+            <li class="presentation-app__list">
+              <img class="presentation-app__image" src="img/iphone--screen-1.png" width="157" height="320"
+                alt="Иллюстрация опций мобильного приложения «PINK»">
+            </li>
+            <li class="presentation-app__list">
+              <img class="presentation-app__image" src="img/iphone--screen-2.png" width="157" height="320"
+                alt="Иллюстрация опций мобильного приложения «PINK»">
+            </li>
+            <li class="presentation-app__list">
+              <img class="presentation-app__image presentation-app__image--current" src="img/iphone--screen-3.png" width="157" height="320"
+                alt="Иллюстрация опций мобильного приложения «PINK»">
+            </li>
+          </ul>
+        </div> -->
       </div>
     </section>
 
@@ -130,8 +158,7 @@
             <p class="reviews__autor-name">Николай Петров</p>
             <span class="reviews__autor-info">25 лет, водитель трамвая</span>
             <cite class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я
-              познакомился со своей будущей женой в
-              комментариях к выложенной фотографии!»</cite>
+              познакомился со своей будущей женой в комментариях к выложенной фотографии!»</cite>
           </blockquote>
           <blockquote class="reviews__item">
             <p class="reviews__autor-name">Вадим Минин</p>
@@ -158,32 +185,67 @@
       <h2 class="visually-hidden">Варианты подписок</h2>
       <div class="container">
         <div class="price-app__list">
-          <table class="price-app__table-item">
-            <caption class="price-app__table-title">Стандарт<br><span class="price-app__value">3,99 USD</span></caption>
-            <tr class="price-app__table-row">
-              <td>
-                Розовый фильтр
-              </td>
-              <td>
-                <img src="img/svg-img/yes.svg" width="31" height="21" alt="Иллюстрация значения «Есть»">
-              </td>
-            </tr>
-            <tr class="price-app__table-row">
-              <td>
-                Смайлики
-              </td>
-              <td>
-                <img src="img/svg-img/yes.svg" width="31" height="21" alt="Иллюстрация значения «Есть»">
-              </td>
-            </tr>
-            <tr class="price-app__table-row">
-              <td>
-                Комментарии
-              </td>
-              <td>
-                <img src="img/svg-img/no.svg" width="27" height="27" alt="Иллюстрация значения «Нет»">
-              </td>
-            </tr>
+          <table class="price-table">
+            <tbody>
+              <tr class="price-table__row">
+                <th class="price-table__title price-table__title--hidden">
+                </th>
+                <th class="price-table__title">
+                  <span class="price-table__tariff">База</span>
+                  <span class="price-table__value">1,99 USD</span>
+                </th>
+                <th class="price-table__title">
+                  <span class="price-table__tariff price-table__tariff--popular">Стандарт</span>
+                  <span class="price-table__value">3,99 USD</span>
+                </th>
+                <th class="price-table__title">
+                  <span class="price-table__tariff">Анлим</span>
+                  <span class="price-table__value">9,99 USD</span>
+                </th>
+              </tr>
+              <tr class="price-table__row">
+                <td class="price-table__cell price-table__cell--hidden">
+                  Розовый фильтр
+                </td>
+                <td class="price-table__cell price-table__cell--avaliable">
+                  <span class="price-table__hidden">Розовый фильтр</span>
+                </td>
+                <td class="price-table__cell price-table__cell--avaliable">
+                  <span class="price-table__hidden">Розовый фильтр</span>
+                </td>
+                <td class="price-table__cell price-table__cell--avaliable">
+                  <span class="price-table__hidden">Розовый фильтр</span>
+                </td>
+              </tr>
+              <tr class="price-table__row">
+                <td class="price-table__cell price-table__cell--hidden">
+                  Смайлики
+                </td>
+                <td class="price-table__cell price-table__cell--unavaliable">
+                  <span class="price-table__hidden">Смайлики</span>
+                </td>
+                <td class="price-table__cell price-table__cell--avaliable">
+                  <span class="price-table__hidden">Смайлики</span>
+                </td>
+                <td class="price-table__cell price-table__cell--avaliable">
+                  <span class="price-table__hidden">Смайлики</span>
+                </td>
+              </tr>
+              <tr class="price-table__row">
+                <td class="price-table__cell price-table__cell--hidden">
+                  Комментарии
+                </td>
+                <td class="price-table__cell price-table__cell--unavaliable">
+                  <span class="price-table__hidden">Комментарии</span>
+                </td>
+                <td class="price-table__cell price-table__cell--unavaliable">
+                  <span class="price-table__hidden">Комментарии</span>
+                </td>
+                <td class="price-table__cell price-table__cell--avaliable">
+                  <span class="price-table__hidden">Комментарии</span>
+                </td>
+              </tr>
+            </tbody>
           </table>
         </div>
 
@@ -217,9 +279,7 @@
         </div>
 
         <div class="contacts__map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6123707705292!2d30.32253241485473!3d59.938574061215014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1616827014442!5m2!1sru!2sru"
-            width="320" height="200" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
+          <img src="img/map--mobile.png" width="320" height="200" alt="Адрес на карте">
         </div>
       </div>
     </section>
@@ -266,7 +326,7 @@
       </div>
 
       <div class="page-footer__copyright copyright">
-        <b class="copyright__text">Разработано:</b>
+        <p class="copyright__text">Разработано</p>
         <a class="copyright__link" href="https://htmlacademy.ru" target="_blank">
           <img src="img/logo/logo-html-academy.svg" width="27" height="34" alt="Логотип компании «HTML Academy»">
         </a>

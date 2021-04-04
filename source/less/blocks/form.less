@@ -39,16 +39,16 @@
   line-height: 30px;
   margin: 0 0 65px 0;
 
-  & label {
-    position: relative;
-    display: block;
-    cursor: pointer;
-    user-select: none;
-  }
-
   &:last-child {
     margin: 0;
   }
+}
+
+.form__fieldset-label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
 }
 
 // Form_achievement
@@ -58,14 +58,7 @@
 }
 
 .form__fieldset-input-checkbox {
-  & label {
-    position: relative;
-    display: block;
-    cursor: pointer;
-    user-select: none;
-  }
-
-  & + label::before {
+  & + .form__fieldset-label::before {
     content: "";
     position: absolute;
     top: -3px;
@@ -76,7 +69,7 @@
     border: 2px solid var(--basic-extra-gray);
   }
 
-  &:checked + label::after {
+  &:checked + .form__fieldset-label::after {
     content: "";
     position: absolute;
     top: 5px;
@@ -96,7 +89,7 @@
 }
 
 .form__radiobox-input {
-  & + label::before {
+  & + .form__fieldset-label::before {
     content: "";
     position: absolute;
     top: -3px;
@@ -108,7 +101,7 @@
     background-color: var(--basic-white);
   }
 
-  &:checked + label::after {
+  &:checked + .form__fieldset-label::after {
     content: "";
     position: absolute;
     top: 7px;
