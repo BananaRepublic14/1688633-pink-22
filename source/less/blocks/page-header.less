@@ -1,10 +1,11 @@
 .page-header__wrapper {
   display: grid;
-  grid-template-columns: 160px 1fr;
-  gap: 155px;
+  grid-template-columns: 75px 1fr;
+  gap: 150px;
   align-items: center;
 
   @media (min-width: @tablet-width) {
+    grid-template-columns: 145px 1fr;
     gap: 425px;
   }
 
@@ -14,7 +15,7 @@
 }
 
 .page-header {
-  min-height: 733px;
+  min-height: 735px;
   background-image: url("../../img/iphone--mobile.png"),
     url("../../img/bg-image--mobile.jpg");
   background-repeat: no-repeat;
@@ -23,12 +24,12 @@
   background-color: var(--basic-extra-dark-2);
 
   @media (min-width: @tablet-width) {
-    min-height: 729px;
+    min-height: 730px;
     background-image: url("../../img/iphone--tablet.png"),
       url("../../img/bg-image--tablet.jpg");
     background-repeat: no-repeat;
-    background-position: 50% 37%, 0 0;
-    background-size: auto, 100% 60%;
+    background-position: 50% 100%, 0 0;
+    background-size: auto, 100% 100%;
     background-color: var(--basic-extra-dark-2);
   }
 

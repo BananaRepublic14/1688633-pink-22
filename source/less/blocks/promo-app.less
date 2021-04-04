@@ -1,6 +1,8 @@
 .promo-app {
-  .flex(@space-between);
-  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
@@ -46,9 +48,19 @@
 }
 
 .promo-app__list {
-  .flex(@space-around);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
   margin: 0;
   padding: 0;
+}
+
+.promo-app__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .promo-app__text {
