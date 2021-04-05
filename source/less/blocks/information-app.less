@@ -1,8 +1,59 @@
+.information-app {
+  background-color: var(--basic-gray);
+}
+
+.information-app__wrapper {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 70px;
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 300px 1fr;
+  }
+}
+
+.information-app__images {
+  margin: 55px 0 0 0;
+
+  @media (min-width: @desktop-width) {
+    margin: 15px 0 0 0;
+  }
+}
+
+.information-app__image {
+  @media (min-width: @desktop-width) {
+    width: 500px;
+    height: 345px;
+  }
+}
+
+.information-app__content {
+  margin: 100px 0 0 0;
+
+  @media (min-width: @desktop-width) {
+    margin: 115px 0 0 0;
+  }
+}
+
 .information-app__title {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   color: var(--basic-dark);
+  margin: 0;
+  padding: 0;
+}
+
+.information-app__description {
+  margin: 25px 0;
+}
+
+.information-app__br {
+  &--desktop {
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
 }
 
 .information-app__link {
@@ -11,4 +62,8 @@
 
 .information-app--current {
   display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
 }
