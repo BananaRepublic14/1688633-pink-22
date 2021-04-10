@@ -7,9 +7,9 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 18px;
-  color: var(--basic-white);
-  background-color: var(--basic-extra-dark-2);
-  border: 3px solid var(--basic-white);
+  color: @white;
+  background-color: @extra-black;
+  border: 3px solid @white;
   border-radius: 29px;
   padding: 10px;
   cursor: pointer;
@@ -20,14 +20,14 @@
   justify-content: center;
   align-items: center;
   min-width: 275px;
-  min-height: 60px;
+  height: 60px;
   font-weight: 700;
   font-size: 18px;
   line-height: 30px;
   text-transform: uppercase;
-  color: var(--basic-white);
-  background-color: var(--basic-green);
-  border: 2px solid var(--basic-green);
+  color: @white;
+  background-color: @green;
+  border: 2px solid @green;
   border-radius: 1px;
   padding: 10px;
   cursor: pointer;
@@ -42,9 +42,9 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 18px;
-  color: var(--basic-pink);
-  background-color: var(--basic-gray);
-  border: 3px solid var(--basic-pink);
+  color: @pink;
+  background-color: @gray;
+  border: 3px solid @pink;
   border-radius: 30px;
   padding: 10px;
   cursor: pointer;
@@ -55,7 +55,7 @@
   }
 
   &--disabled {
-    color: var(--basic-extra-dark);
+    color: @dark-blue;
     border: 3px solid currentColor;
     opacity: 0.1;
     cursor: not-allowed;
