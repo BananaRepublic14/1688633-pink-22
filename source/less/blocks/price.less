@@ -1,0 +1,48 @@
+.price {
+  width: 360px; // Временная ширина, думаю как отображать по центру
+  padding: 91px 0 32px 0;
+  margin: 0 auto;
+  background-color: @silver;
+  background-image: url("../../img/svg-img/price-triangle.svg");
+  background-size: 100% 25px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    padding: 86px 0 69px 0;
+    background-size: 100% 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 150px 0 95px 0;
+    background-size: 100% 80px;
+  }
+}
+
+.price__slider {
+  line-height: 30px;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+.price__slider-controls {
+  margin: 40px 0 15px 0;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.price__table {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: left 0.4s linear;
+
+  @media (min-width: @tablet-width) {
+    position: static;
+    left: auto;
+    transform: none;
+  }
+}

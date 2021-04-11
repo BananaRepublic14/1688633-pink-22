@@ -1,22 +1,32 @@
 .information-app {
-  background-color: var(--basic-gray);
+  @media (min-width: @tablet-width) {
+    margin: 0 0 110px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @silver;
+    margin: 0 0 72px 0;
+  }
 }
 
 .information-app__wrapper {
+  width: 620px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 240px 1fr;
-  gap: 70px;
+  grid-template-columns: repeat(2, 1fr);
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 300px 1fr;
+    width: 100%;
+    grid-template-columns: 1fr 2fr;
+    gap: 70px;
   }
 }
 
 .information-app__images {
-  margin: 55px 0 0 0;
+  display: flex;
 
   @media (min-width: @desktop-width) {
-    margin: 15px 0 0 0;
+    padding: 0 0 67px 0;
   }
 }
 
@@ -28,36 +38,34 @@
 }
 
 .information-app__content {
-  margin: 100px 0 0 0;
-
-  @media (min-width: @desktop-width) {
-    margin: 115px 0 0 0;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .information-app__title {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
-  color: var(--basic-dark);
-  margin: 0;
+  color: @black;
+  margin: 50px 0 0 0;
   padding: 0;
+
+  @media (min-width: @desktop-width) {
+    margin: 80px 0 0 0;
+  }
 }
 
 .information-app__description {
   margin: 25px 0;
-}
 
-.information-app__br {
-  &--desktop {
-    @media (min-width: @desktop-width) {
-      display: none;
-    }
+  @media (min-width: @desktop-width) {
+    margin: 37px 0 47px 0;
   }
 }
 
 .information-app__link {
-  color: var(--basic-pink);
+  color: @pink;
 }
 
 .information-app--current {
