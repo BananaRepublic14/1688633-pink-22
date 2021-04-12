@@ -1,14 +1,44 @@
 .workshop-photo__title {
-  font-size: 14px;
   line-height: 30px;
+  text-align: center;
+  margin: 0;
+  padding: 49px 20px 52px 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+  }
 }
 
 .workshop-photo__form {
-  background-color: @gray;
+  background-color: @silver;
 }
 
-.workshop-photo__fieldset {
+.workshop-photo__image-button {
+  width: 100%;
+  height: 100%;
+}
+
+.workshop-photo__elements-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
   margin: 0;
-  padding: 0;
-  border: 0 none;
+  padding: 42px 0 0 0;
+}
+
+.workshop-photo__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 38px 0 41px 0;
+}
+
+.workshop-photo__button {
+  margin: 0 0 12px 0;
+
+  &:last-child {
+    margin: 0;
+  }
 }
