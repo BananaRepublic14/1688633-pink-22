@@ -16,18 +16,15 @@
 
 .photo__link {
   display: block;
-  overflow: hidden;
-  min-width: 280px;
   height: 180px;
+  overflow: hidden;
   position: relative;
 
   @media (min-width: @tablet-width) {
-    min-width: 300px;
     height: 300px;
   }
 
   @media (min-width: @desktop-width) {
-    min-width: 300px;
     height: 400px;
   }
 
@@ -41,28 +38,25 @@
     }
 
     @media (min-width: @desktop-width) {
-      min-width: 1200px;
+      max-width: 1920px;
       height: 506px;
     }
+
+    &::before {
+      content: attr(panorama-text);
+      position: absolute;
+      top: 0;
+      right: 20px;
+      padding: 6px 20px;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 24px;
+      text-transform: uppercase;
+      color: @white;
+      background-color: @pink;
+      z-index: 10;
+    }
   }
-
-  &--panorama::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 140px;
-    height: 36px;
-    background: url("../../img/svg-img/panorama.svg") 0 0 no-repeat;
-
-    // Потом как картинки вставлю для планшета и десктопа - задам значение и для них
-  }
-}
-
-.photo__image {
-  display: block;
-  width: 100%;
-  height: auto;
 }
 
 .photo__content {
