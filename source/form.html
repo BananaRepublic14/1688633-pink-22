@@ -13,10 +13,10 @@
 </head>
 
 <body class="page-body">
-  <header class="header header--form">
+  <header class="header header--closed">
     <h1 class="visually-hidden">Сайт мобильного приложения «PINK»</h1>
 
-    <div class="container">
+    <div class="header__navigation-wrapper">
       <nav class="main-navigation">
         <div class="main-navigation__logo-wrapper">
           <a class="main-navigation__logo" href="index.html">
@@ -28,12 +28,13 @@
               alt="Логотип сайта мобильного приложения «PINK»">
           </a>
 
-          <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <button class="main-navigation__toggle main-navigation__toggle--closed" type="button"><span class="visually-hidden">Открыть
+              меню</span></button>
         </div>
 
-        <ul class="main-navigation__list list-reset">
+        <ul class="main-navigation__list main-navigation__list--closed list-reset">
           <li class="main-navigation__item">
-            <a class="main-navigation__link" href="index.html">
+            <a class="main-navigation__link" href="#">
               Главная
             </a>
           </li>
@@ -65,122 +66,125 @@
   <main class="page-form">
     <h2 class="visually-hidden">Конкурс от создателей мобильного приложения «PINK»</h2>
 
-    <form class="form container" action="https://echo.htmlacademy.ru" method="POST">
+    <form class="form" action="https://echo.htmlacademy.ru" method="POST">
+      <div class="container">
 
-      <h3 class="form__title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную
-        карту!&thinsp;<span class="form__table-show">Пожалуйста, заполните форму ниже:</span></h3>
+        <h3 class="form__title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную
+          карту!&thinsp;<span class="form__table-show">Пожалуйста, заполните форму ниже:</span></h3>
 
-      <div class="form__container grid-form">
-        <div class="form-data">
-          <fieldset class="form-data__fieldset">
-            <ul class="form-data__list list-reset">
-              <li class="form-data__item">
-                <label class="form-data__label form__label" for="lastname">Фамилия:</label>
-                <input class="form-data__input form__input" type="text" id="lastname" name="lastname" placeholder="Укажите фамилию &#42;"
-                  required>
-              </li>
-              <li class="form-data__item">
-                <label class="form-data__label form__label" for="firstname">Имя:</label>
-                <input class="form-data__input form__input" type="text" id="firstname" name="firstname" placeholder="Введите ваше имя &#42;"
-                  required>
-              </li>
-              <li class="form-data__item">
-                <label class="form-data__label form__label" for="middlename">Отчество:</label>
-                <input class="form-data__input form__input" type="text" id="middlename" name="middlename" placeholder="Ну и отчество тоже">
-              </li>
-            </ul>
-          </fieldset>
+        <div class="form__container grid-form">
+          <div class="form-data">
+            <fieldset class="form-data__fieldset">
+              <ul class="form-data__list list-reset">
+                <li class="form-data__item">
+                  <label class="form-data__label form__label" for="lastname">Фамилия:</label>
+                  <input class="form-data__input form__input" type="text" id="lastname" name="lastname" placeholder="Укажите фамилию &#42;"
+                    required>
+                </li>
+                <li class="form-data__item">
+                  <label class="form-data__label form__label" for="firstname">Имя:</label>
+                  <input class="form-data__input form__input" type="text" id="firstname" name="firstname"
+                    placeholder="Введите ваше имя &#42;" required>
+                </li>
+                <li class="form-data__item">
+                  <label class="form-data__label form__label" for="middlename">Отчество:</label>
+                  <input class="form-data__input form__input" type="text" id="middlename" name="middlename"
+                    placeholder="Ну и отчество тоже">
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+
+          <div class="form-achievement grid-form__achievement">
+            <fieldset class="form-achievement__fieldset">
+              <legend class="form-achievement__legend">Ваши безбашенные достижения в путешествии</legend>
+              <ul class="form-achievement__list list-reset">
+                <li class="form-achievement__item">
+                  <input class="visually-hidden form-achievement__input" type="checkbox" name="achievement-1" id="achievement-1-id" checked>
+                  <label class="form-achievement__label" for="achievement-1-id">Сделал селфи с акулой</label>
+                </li>
+                <li class="form-achievement__item">
+                  <input class="visually-hidden form-achievement__input" type="checkbox" name="achievement-2" id="achievement-2-id" checked>
+                  <label class="form-achievement__label" for="achievement-2-id">Обгорел на пляже</label>
+                </li>
+                <li class="form-achievement__item ">
+                  <input class="visually-hidden form-achievement__input" type="checkbox" name="achievement-3" id="achievement-3-id">
+                  <label class="form-achievement__label" for="achievement-3-id">Видел Чака Норриса</label>
+                </li>
+                <li class="form-achievement__item">
+                  <input class="visually-hidden form-achievement__input" type="checkbox" name="achievement-4" id="achievement-4-id">
+                  <label class="form-achievement__label" for="achievement-4-id">Накупил сувениров</label>
+                </li>
+                <li class="form-achievement__item">
+                  <input class="visually-hidden form-achievement__input" type="checkbox" name="achievement-5" id="achievement-5-id" checked>
+                  <label class="form-achievement__label" for="achievement-2-id">Удержал башню</label>
+                </li>
+                <li class="form-achievement__item">
+                  <input class="visually-hidden form-achievement__input" type="checkbox" name="achievement-6" id="achievement-6-id">
+                  <label class="form-achievement__label" for="achievement-6-id">Разгромил отель</label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+
+          <div class="form-contacts grid-form__contacts">
+            <fieldset class="form-contacts__fieldset">
+              <legend class="form-contacts__legend form-contacts__legend--show">Контактная информация</legend>
+
+              <ul class="form-contacts__list list-reset">
+                <li class="form-contacts__item form-contacts__item--contacts form-contacts__item--phone">
+                  <label class="form-contacts__label form-contacts__label--contacts form__label" for="tel-id">Номер телефона</label>
+                  <input class="form-contacts__input form__input" type="tel" name="tel" id="tel-id" pattern="+7[0-9]{3}-[0-9]{3}-[0-9]{3}"
+                    placeholder="Номер, пожалуйста">
+                </li>
+                <li class="form-contacts__item form-contacts__item--contacts form-contacts__item--email">
+                  <label class="form-contacts__label form__label" for="email-id">Адрес почты</label>
+                  <input class="form-contacts__input form__input" type="text" name="email" id="email-id" placeholder="Введите почту &#42;"
+                    required>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+
+          <div class="form-radiobox grid-form__radiobox">
+            <fieldset class="form-radiobox__fieldset">
+              <legend class="form-radiobox__legend">С каким приложением путешествовали?</legend>
+              <ul class="form-radiobox__list list-reset">
+                <li class="form-radiobox__item">
+                  <input class="visually-hidden form-radiobox__input" type="radio" name="radio" value="ios" id="ios-id" checked>
+                  <label class="form-radiobox__label" for="ios-id">Pink для iOS</label>
+                </li>
+                <li class="form-radiobox__item">
+                  <input class="visually-hidden form-radiobox__input" type="radio" name="radio" value="android" id="android-id">
+                  <label class="form-radiobox__label" for="android-id">Pink на Android</label>
+                </li>
+                <li class="form-radiobox__item">
+                  <input class="visually-hidden form-radiobox__input" type="radio" name="radio" value="windows" id="windows-id">
+                  <label class="form-radiobox__label" for="windows-id">Windows Phone</label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+
+          <div class="form-textarea grid-form__textarea">
+            <fieldset class="form-textarea__fieldset">
+              <legend class="form-textarea__legend">Опишите свои эмоции</legend>
+              <div class="form-textarea__item">
+                <label class="form-textarea__label" for="text-id"></label>
+                <textarea class="form-textarea__input" name="text" id="text-id"
+                  placeholder="Можно прям в красках, не стесняясь в выражениях" rows="5" cols="60"></textarea>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="form__wrapper-button grid-form__button">
+            <button class="form__button-submit button-form" type="submit">Отправить форму</button>
+            <small class="form__legend form__note">
+              &#42; — обязательные поля
+            </small>
+          </div>
+
         </div>
-
-        <div class="form-achievement grid-form__achievement">
-          <fieldset class="form-achievement__fieldset">
-            <legend class="form-achievement__legend">Ваши безбашенные достижения в путешествии</legend>
-            <ul class="form-achievement__list list-reset">
-              <li class="form-achievement__item">
-                <input class="visually-hidden form-achievement__input" type="checkbox" name="achievement-1" id="achievement-1-id" checked>
-                <label class="form-achievement__label" for="achievement-1-id">Сделал селфи с акулой</label>
-              </li>
-              <li class="form-achievement__item">
-                <input class="visually-hidden form-achievement__input" type="checkbox" name="achievement-2" id="achievement-2-id" checked>
-                <label class="form-achievement__label" for="achievement-2-id">Обгорел на пляже</label>
-              </li>
-              <li class="form-achievement__item ">
-                <input class="visually-hidden form-achievement__input" type="checkbox" name="achievement-3" id="achievement-3-id">
-                <label class="form-achievement__label" for="achievement-3-id">Видел Чака Норриса</label>
-              </li>
-              <li class="form-achievement__item">
-                <input class="visually-hidden form-achievement__input" type="checkbox" name="achievement-4" id="achievement-4-id">
-                <label class="form-achievement__label" for="achievement-4-id">Накупил сувениров</label>
-              </li>
-              <li class="form-achievement__item">
-                <input class="visually-hidden form-achievement__input" type="checkbox" name="achievement-5" id="achievement-5-id" checked>
-                <label class="form-achievement__label" for="achievement-2-id">Удержал башню</label>
-              </li>
-              <li class="form-achievement__item">
-                <input class="visually-hidden form-achievement__input" type="checkbox" name="achievement-6" id="achievement-6-id">
-                <label class="form-achievement__label" for="achievement-6-id">Разгромил отель</label>
-              </li>
-            </ul>
-          </fieldset>
-        </div>
-
-        <div class="form-contacts grid-form__contacts">
-          <fieldset class="form-contacts__fieldset">
-            <legend class="form-contacts__legend form-contacts__legend--show">Контактная информация</legend>
-
-            <ul class="form-contacts__list list-reset">
-              <li class="form-contacts__item form-contacts__item--contacts form-contacts__item--phone">
-                <label class="form-contacts__label form-contacts__label--contacts form__label" for="tel-id">Номер телефона</label>
-                <input class="form-contacts__input form__input" type="tel" name="tel" id="tel-id" pattern="+7[0-9]{3}-[0-9]{3}-[0-9]{3}"
-                  placeholder="Номер, пожалуйста">
-              </li>
-              <li class="form-contacts__item form-contacts__item--contacts form-contacts__item--email">
-                <label class="form-contacts__label form__label" for="email-id">Адрес почты</label>
-                <input class="form-contacts__input form__input" type="text" name="email" id="email-id" placeholder="Введите почту &#42;"
-                  required>
-              </li>
-            </ul>
-          </fieldset>
-        </div>
-
-        <div class="form-radiobox grid-form__radiobox">
-          <fieldset class="form-radiobox__fieldset">
-            <legend class="form-radiobox__legend">С каким приложением путешествовали?</legend>
-            <ul class="form-radiobox__list list-reset">
-              <li class="form-radiobox__item">
-                <input class="visually-hidden form-radiobox__input" type="radio" name="radio" value="ios" id="ios-id" checked>
-                <label class="form-radiobox__label" for="ios-id">Pink для iOS</label>
-              </li>
-              <li class="form-radiobox__item">
-                <input class="visually-hidden form-radiobox__input" type="radio" name="radio" value="android" id="android-id">
-                <label class="form-radiobox__label" for="android-id">Pink на Android</label>
-              </li>
-              <li class="form-radiobox__item">
-                <input class="visually-hidden form-radiobox__input" type="radio" name="radio" value="windows" id="windows-id">
-                <label class="form-radiobox__label" for="windows-id">Windows Phone</label>
-              </li>
-            </ul>
-          </fieldset>
-        </div>
-
-        <div class="form-textarea grid-form__textarea">
-          <fieldset class="form-textarea__fieldset">
-            <legend class="form-textarea__legend">Опишите свои эмоции</legend>
-            <div class="form-textarea__item">
-              <label class="form-textarea__label" for="text-id"></label>
-              <textarea class="form-textarea__input" name="text" id="text-id" placeholder="Можно прям в красках, не стесняясь в выражениях"
-                rows="5" cols="60"></textarea>
-            </div>
-          </fieldset>
-        </div>
-
-        <div class="form__wrapper-button grid-form__button">
-          <button class="form__button-submit button-form" type="submit">Отправить форму</button>
-          <small class="form__legend form__note">
-            &#42; — обязательные поля
-          </small>
-        </div>
-
       </div>
     </form>
   </main>

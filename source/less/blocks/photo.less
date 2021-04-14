@@ -16,34 +16,15 @@
 
 .photo__link {
   display: block;
-  height: 180px;
   overflow: hidden;
   position: relative;
 
-  @media (min-width: @tablet-width) {
-    height: 300px;
-  }
-
-  @media (min-width: @desktop-width) {
-    height: 400px;
-  }
-
   &--full {
-    min-width: 320px;
-    height: 137px;
-
-    @media (min-width: @tablet-width) {
-      min-width: 700px;
-      height: 509px;
-    }
-
-    @media (min-width: @desktop-width) {
-      max-width: 1920px;
-      height: 506px;
-    }
+    max-width: 1920px;
+    margin: 0 auto;
 
     &::before {
-      content: attr(panorama-text);
+      content: attr(data-panorama-text);
       position: absolute;
       top: 0;
       right: 20px;
@@ -67,24 +48,26 @@
   background-color: @silver;
 
   @media (min-width: @tablet-width) {
+    margin: 0;
     padding: 23px 32px 24px 27px;
   }
 
   &--full {
-    margin: 0 20px 20px 20px;
-
     @media (min-width: @tablet-width) {
       flex-flow: row wrap;
       justify-content: space-between;
       padding: 24px 29px 13px 27px;
-      margin: 0 20px 50px 20px;
     }
 
     @media (min-width: @desktop-width) {
       padding: 24px 32px 12px 27px;
-      margin: 0 130px 50px 130px;
     }
   }
+}
+
+.photo__image {
+  display: block;
+  width: 100%;
 }
 
 .photo__author {

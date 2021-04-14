@@ -13,14 +13,13 @@
 </head>
 
 <body class="page-body">
-  <header class="header header--index">
+  <header class="header header--closed">
     <h1 class="visually-hidden">Сайт мобильного приложения «PINK»</h1>
 
-    <div class="container">
+    <div class="header__navigation-wrapper">
       <nav class="main-navigation">
         <div class="main-navigation__logo-wrapper">
-
-          <a class="main-navigation__logo">
+          <a class="main-navigation__logo" href="index.html">
             <img class="main-navigation__image-mobile" src="img/logo/logo-mobile.svg" width="74" height="23"
               alt="Логотип сайта мобильного приложения «PINK»">
             <img class="main-navigation__image-tablet" src="img/logo/logo-tablet.svg" width="145" height="40"
@@ -29,10 +28,11 @@
               alt="Логотип сайта мобильного приложения «PINK»">
           </a>
 
-          <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <button class="main-navigation__toggle main-navigation__toggle--closed" type="button"><span class="visually-hidden">Открыть
+              меню</span></button>
         </div>
 
-        <ul class="main-navigation__list list-reset">
+        <ul class="main-navigation__list main-navigation__list--closed list-reset">
           <li class="main-navigation__item">
             <a class="main-navigation__link" href="#">
               Главная
@@ -57,34 +57,32 @@
       </nav>
     </div>
 
-    <section class="promo-app">
-      <h2 class="visually-hidden">Скачать мобильное приложение «PINK»</h2>
+    <h2 class="visually-hidden">Скачать мобильное приложение «PINK»</h2>
 
-      <div class="container">
-        <div class="promo-app__wrapper">
-          <h2 class="promo-app__title">Взгляните на жизнь иначе!</h2>
-          <button class="button-index promo-app__button" type="button">Скачать приложение</button>
-          <ul class="promo-app__list list-reset">
-            <li class="promo-app__item">
-              <a href="#" class="promo-app__link">
-                <img src="img/logo/apple-logo.svg" width="47" height="56" alt="Скачать приложение для телефонов «Apple»">
-              </a>
-            </li>
-            <li class="promo-app__item">
-              <a href="#" class="promo-app__link">
-                <img src="img/logo/android-logo.svg" width="43" height="47" alt="Скачать приложение для телефонов «Android»">
-              </a>
-            </li>
-            <li class="promo-app__item">
-              <a href="#" class="promo-app__link">
-                <img src="img/logo/microsoft-logo.svg" width="44" height="41" alt="Скачать приложение для устройств «Windows»">
-              </a>
-            </li>
-          </ul>
-          <p class="promo-app__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-        </div>
+    <div class="header__promo-app promo-app">
+      <div class="promo-app__content">
+        <h2 class="promo-app__title">Взгляните на жизнь иначе!</h2>
+        <button class="button-index promo-app__button" type="button">Скачать приложение</button>
+        <ul class="promo-app__list list-reset">
+          <li class="promo-app__item">
+            <a href="#" class="promo-app__link">
+              <img src="img/logo/apple-logo.svg" width="47" height="56" alt="Скачать приложение для телефонов «Apple»">
+            </a>
+          </li>
+          <li class="promo-app__item">
+            <a href="#" class="promo-app__link">
+              <img src="img/logo/android-logo.svg" width="43" height="47" alt="Скачать приложение для телефонов «Android»">
+            </a>
+          </li>
+          <li class="promo-app__item">
+            <a href="#" class="promo-app__link">
+              <img src="img/logo/microsoft-logo.svg" width="44" height="41" alt="Скачать приложение для устройств «Windows»">
+            </a>
+          </li>
+        </ul>
+        <p class="promo-app__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
       </div>
-    </section>
+    </div>
   </header>
 
   <main class="main">

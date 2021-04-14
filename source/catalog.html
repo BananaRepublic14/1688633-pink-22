@@ -13,10 +13,10 @@
 </head>
 
 <body class="page-body">
-  <header class="header header--catalog">
+  <header class="header header--closed">
     <h1 class="visually-hidden">Сайт мобильного приложения «PINK»</h1>
 
-    <div class="container">
+    <div class="header__navigation-wrapper">
       <nav class="main-navigation">
         <div class="main-navigation__logo-wrapper">
           <a class="main-navigation__logo" href="index.html">
@@ -28,10 +28,11 @@
               alt="Логотип сайта мобильного приложения «PINK»">
           </a>
 
-          <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <button class="main-navigation__toggle main-navigation__toggle--closed" type="button"><span class="visually-hidden">Открыть
+              меню</span></button>
         </div>
 
-        <ul class="main-navigation__list list-reset">
+        <ul class="main-navigation__list main-navigation__list--closed list-reset">
           <li class="main-navigation__item">
             <a class="main-navigation__link" href="index.html">
               Главная
@@ -71,26 +72,29 @@
       </p>
 
       <figure class="photo photo--full">
-        <a class="photo__link photo__link--full" panorama-text="Панорама дня">
+
+        <a class="photo__link photo__link--full" data-panorama-text="Панорама дня">
           <picture>
             <img class="photo__image" src="img/catalog-img/user-photo-1.jpg" width="320" height="137"
               alt="Фотография «Мост на вершине горы». Автор Анна">
           </picture>
         </a>
 
-        <figcaption class="photo__content photo__content--full">
-          <p class="photo__author">
-            <b class="photo__author-name">Анна</b>
-            <time class="photo__date" datetime="2021-04-18T18:00">(5 минут назад)</time>
-          </p>
+        <figcaption class="photo__wrapper container">
+          <div class="photo__content photo__content--full">
+            <p class="photo__author">
+              <b class="photo__author-name">Анна</b>
+              <time class="photo__date" datetime="2021-04-18T18:00">(5 минут назад)</time>
+            </p>
 
-          <p class="photo__text photo__text--full">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую
-            трансляцию в перископе, задавайте свои вопросы!</p>
+            <p class="photo__text photo__text--full">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую
+              трансляцию в перископе, задавайте свои вопросы!</p>
 
-          <div class="photo__likes photo__likes--full">
-            <button class="photo__like-button" type="button" aria-label="Лайк"></button>
+            <div class="photo__likes photo__likes--full">
+              <button class="photo__like-button" type="button" aria-label="Лайк"></button>
 
-            <span class="photo__like-count">Нравится: 215</span>
+              <span class="photo__like-count">Нравится: 215</span>
+            </div>
           </div>
         </figcaption>
       </figure>

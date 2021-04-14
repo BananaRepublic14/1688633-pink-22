@@ -1,19 +1,23 @@
 .main-navigation {
-  display: grid;
-  grid-template-columns: 75px 1fr;
-  align-items: center;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 32px;
-  text-transform: uppercase;
-
-  @media (min-width: @tablet-width) {
-    grid-template-columns: 145px 1fr;
-  }
+  margin: 0 auto;
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 147px 1fr;
-    gap: 170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    width: 940px;
+    background-color: transparent;
+  }
+}
+
+.main-navigation__logo-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 21px 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 27px 20px 43px 20px;
   }
 }
 
@@ -58,32 +62,132 @@
 .main-navigation__list {
   margin: 0;
   padding: 0;
+  border-top: 1px solid @black;
+  line-height: 32px;
 
   @media (min-width: @desktop-width) {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    height: 110px;
-    font-weight: 400;
+    width: 632px;
+    border-top: 0;
     line-height: 18px;
-    text-transform: none;
   }
+
+  // Список меню
+  // &--closed {
+  //   display: none;
+  // }
 }
 
 .main-navigation__item {
-  margin: 0 79px 0 0;
+  position: relative;
+  border-top: 1px solid fade(@white, 15%);
+  border-bottom: 1px solid @black;
+  text-align: center;
 
-  &:last-child {
-    margin: 0;
+  @media (min-width: @desktop-width) {
+    margin: 10px 0;
+    padding: 0;
+    border: 0;
+  }
+
+  &:not(:nth-child(4n + 4)) {
+    @media (min-width: @desktop-width) {
+      margin-right: 80px;
+    }
   }
 }
 
 .main-navigation__link {
+  display: block;
+  padding: 15px 20px;
+  font-size: 18px;
+  font-weight: 700;
   color: @white;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    font-weight: 400;
+    text-transform: none;
+  }
+
+  &:hover {
+    color: @pink;
+  }
+
+  &:active {
+    color: fade(@pink, 30%);
+
+    @media (min-width: @desktop-width) {
+      color: fade(@white, 30%);
+    }
+  }
 }
 
 .main-navigation__toggle {
+  position: relative;
+  padding: 0;
+  border: 0;
+  width: 50px;
+  height: 24px;
+  color: @white;
+  background-color: transparent;
+
+  @media (min-width: @tablet-width) {
+    align-self: flex-end;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -3px;
+    width: 28px;
+    height: 4px;
+    background-color: currentColor;
+  }
+
+  &::before {
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translateY(-50%) rotate(-45deg);
+  }
+
+  &:hover,
+  &:active {
+    color: @pink;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @desktop-width) {
     display: none;
   }
+
+  //При закрытом меню добавляетс данный класс
+  // &--closed {
+  //   &::before {
+  //     content: "";
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     right: 0;
+  //     transform: none;
+  //     width: 50px;
+  //     height: 4px;
+  //     background-color: currentColor;
+  //     box-shadow: 0 10px 0 0 currentColor, 0 20px 0 0 currentColor;
+  //   }
+
+  //   &::after {
+  //     content: none;
+  //   }
+  // }
 }
