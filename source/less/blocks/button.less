@@ -43,15 +43,19 @@
   font-size: 18px;
   line-height: 18px;
   color: @pink;
-  background-color: @gray;
+  background-color: @silver;
   border: 3px solid @pink;
   border-radius: 30px;
   padding: 10px;
   cursor: pointer;
 
-  &--mobile {
+  &--adaptive {
     width: 280px;
     height: 50px;
+
+    @media (max-width: tablet-width) {
+      width: 260px;
+    }
   }
 
   &--disabled {

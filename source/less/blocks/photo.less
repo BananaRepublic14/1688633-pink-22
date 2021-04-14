@@ -1,0 +1,161 @@
+.photo {
+  margin: 0;
+}
+
+.photo__title {
+  line-height: 30px;
+  text-align: center;
+  margin: 0;
+  padding: 54px 20px 60px 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    padding: 100px 40px 85px 40px;
+  }
+}
+
+.photo__link {
+  display: block;
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    height: 300px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 400px;
+  }
+
+  &--full {
+    min-width: 320px;
+    height: 137px;
+
+    @media (min-width: @tablet-width) {
+      min-width: 700px;
+      height: 509px;
+    }
+
+    @media (min-width: @desktop-width) {
+      max-width: 1920px;
+      height: 506px;
+    }
+
+    &::before {
+      content: attr(panorama-text);
+      position: absolute;
+      top: 0;
+      right: 20px;
+      padding: 6px 20px;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 24px;
+      text-transform: uppercase;
+      color: @white;
+      background-color: @pink;
+      z-index: 10;
+    }
+  }
+}
+
+.photo__content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 25px 17px;
+  background-color: @silver;
+
+  @media (min-width: @tablet-width) {
+    padding: 23px 32px 24px 27px;
+  }
+
+  &--full {
+    margin: 0 20px 20px 20px;
+
+    @media (min-width: @tablet-width) {
+      flex-flow: row wrap;
+      justify-content: space-between;
+      padding: 24px 29px 13px 27px;
+      margin: 0 20px 50px 20px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 24px 32px 12px 27px;
+      margin: 0 130px 50px 130px;
+    }
+  }
+}
+
+.photo__author {
+  margin: 0;
+}
+
+.photo__author-name {
+  font-weight: 700;
+}
+
+.photo__date,
+.photo__like-count {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.photo__date {
+  font-weight: 300;
+}
+
+.photo__text {
+  margin: 14px 0 25px 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 12px 0;
+    min-height: 48px;
+  }
+
+  &--full {
+    @media (min-width: @tablet-width) {
+      order: 2;
+      min-height: auto;
+    }
+  }
+}
+
+.photo__likes {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  &--full {
+    @media (min-width: @tablet-width) {
+      order: 1;
+    }
+  }
+}
+
+.photo__like-button {
+  display: block;
+  padding: 0;
+  width: 13px;
+  height: 12px;
+  border: 0;
+  background-color: transparent;
+  background-image: url("../../img/svg-img/heart.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.photo__like-count {
+  margin: 0 0 0 19px;
+  color: @pink;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 17px 0 0;
+  }
+}

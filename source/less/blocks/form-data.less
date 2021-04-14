@@ -1,9 +1,7 @@
 .form-data {
   width: 100%;
-  margin: 0 0 44px 0;
 
   @media (min-width: @tablet-width) {
-    margin: 0 0 19px 0;
     order: 0;
   }
 
@@ -20,7 +18,11 @@
 
 .form-data__list {
   margin: 0;
-  padding: 0;
+  padding: 0 0 44px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
 
 .form-data__item {
@@ -39,11 +41,11 @@
 }
 
 .form-data__label {
-  margin: 0 0 17px 23px;
-  padding: 0;
+  margin: 0;
+  padding: 0 0 17px 23px;
 
   @media (min-width: @tablet-width) {
-    margin: 0 20px 0 0;
+    padding: 0 20px 0 0;
   }
 }
 
