@@ -1,12 +1,8 @@
 .grid-photo {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  row-gap: 20px;
-
-  @media (min-width: @tablet-width) {
-    row-gap: 0;
-    column-gap: 20px;
-  }
+  grid-template-columns: repeat(auto-fill, minmax(280px, 300px));
+  justify-content: center;
+  gap: 20px;
 
   @media (min-width: @desktop-width) {
     row-gap: 54px;

@@ -1,7 +1,6 @@
 .price {
-  width: 360px; // Временная ширина, думаю как отображать по центру
-  padding: 91px 0 32px 0;
   margin: 0 auto;
+  padding: 91px 0 32px 0;
   background-color: @silver;
   background-image: url("../../img/svg-img/price-triangle.svg");
   background-size: 100% 25px;
@@ -24,6 +23,11 @@
   line-height: 30px;
   text-transform: uppercase;
   overflow: hidden;
+  width: 100vw;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+  }
 }
 
 .price__slider-controls {

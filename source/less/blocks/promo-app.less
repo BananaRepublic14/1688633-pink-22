@@ -1,38 +1,52 @@
 .promo-app {
-  width: 100%;
-  margin: 0;
-}
-
-.promo-app__wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 280px;
+  background-image: url("../../img/iphone--mobile.png");
+  background-position: 0 98px;
+  background-size: auto;
+  background-repeat: no-repeat;
 
   @media (min-width: @tablet-width) {
-    align-items: flex-start;
+    width: 620px;
+    background-image: url("../../img/iphone--tablet.png");
+    background-position: -15px 110px;
+    background-size: auto;
+    padding: 93px 0 110px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 940px;
+    background-image: url("../../img/iphone--desktop.png");
+    background-position: 15px 145px;
+    background-size: auto;
+    padding: 98px 10px 130px 10px;
+  }
+}
+
+.promo-app__content {
+  @media (min-width: @tablet-width) {
+    width: 300px;
   }
 }
 
 .promo-app__title {
-  width: 300px;
   font-weight: 300;
   font-size: 24px;
   line-height: 33px;
-  color: @white;
   text-align: center;
-  margin: 30px 0 350px 0;
-  padding: 0;
+  color: @white;
+  margin: 29px 0 348px 0;
+  padding: 0 30px;
 
   @media (min-width: @tablet-width) {
     font-size: 40px;
     line-height: 48px;
-    margin: 100px 0 40px 0;
+    margin: 28px 0 39px 0;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 50px;
     line-height: 68px;
-    margin: 115px 0 50px 0;
+    margin: 16px 0 51px 0;
   }
 }
 
@@ -52,6 +66,7 @@
 
 .promo-app__list {
   display: flex;
+  justify-content: center;
   margin: 0;
   padding: 0;
 }
@@ -65,30 +80,20 @@
   &:last-child {
     margin: 0;
   }
-
-  @media (min-width: @tablet-width) {
-    margin: 0 0 0 35px;
-
-    &:last-child {
-      margin: 0 0 0 35px;
-    }
-  }
 }
 
 .promo-app__text {
   font-weight: 300;
   color: @white;
   text-align: center;
-  margin: 30px 0 40px 0;
+  margin: 28px 0 0 0;
 
   @media (min-width: @tablet-width) {
-    width: 300px;
     font-size: 18px;
     line-height: 24px;
-    margin: 40px 0 120px 0;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 60px 0 130px 0;
+    margin: 58px 0 0 0;
   }
 }
