@@ -20,6 +20,11 @@
   background-color: transparent;
   cursor: pointer;
 
+  &:focus::before {
+    border-top: 2px solid @pink;
+    border-right: 2px solid @pink;
+  }
+
   &::before {
     content: "";
     position: absolute;

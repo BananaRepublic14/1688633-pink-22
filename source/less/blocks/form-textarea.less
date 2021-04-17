@@ -39,7 +39,7 @@
 
 .form-textarea__input {
   width: 100%;
-  min-height: 200px;
+  height: 197px;
   font-size: 18px;
   line-height: 30px;
   border: 2px solid @gray;
@@ -47,4 +47,21 @@
   margin: 0;
   padding: 23px;
   resize: none;
+
+  @media (min-width: @tablet-width) {
+    height: 189px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 124px;
+  }
+
+  &:hover {
+    border-color: @dark-blue;
+  }
+
+  &:focus {
+    outline: 0;
+    border-color: @pink;
+  }
 }

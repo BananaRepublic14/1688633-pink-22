@@ -2,7 +2,7 @@
   position: relative;
   background-color: @dark-blue;
   background-image: url("../../img/bg-image--mobile.jpg");
-  background-position: 50% 329px;
+  background-position: 50% 353px;
   background-size: 100% 40%;
   background-repeat: no-repeat;
   color: @white;
@@ -10,7 +10,7 @@
 
   @media (min-width: @tablet-width) {
     background-image: url("../../img/bg-image--tablet.jpg");
-    background-position: 50% 368px;
+    background-position: 50% 378px;
     background-size: 100% 65%;
     padding: 0;
   }
@@ -26,6 +26,39 @@
   //   background-position: 50% 72px;
   //   background-size: 100% 53%;
   // }
+
+  &-form,
+  &-catalog {
+    background-position: 50% 353px;
+    background-size: 100% 60%;
+    padding: 0;
+
+    @media (min-width: @tablet-width) {
+      background-position: 50% 377px;
+      background-size: 100% 80%;
+    }
+
+    @media (min-width: @desktop-width) {
+      background-position: 50% 0;
+      background-size: 100% 215%;
+    }
+  }
+
+  // При закрытом меню добавлятся этот класс и смещается фон.
+  // &-form {
+  //   &--closed {
+  //     background-position: 50% 0;
+  //     background-size: 100% 195%;
+  //   }
+  // }
+
+  // При закрытом меню добавлятся этот класс и смещается фон.
+  // &-catalog {
+  //   &--closed {
+  //     background-position: 50% 0;
+  //     background-size: 100% 195%;
+  //   }
+  // }
 }
 
 .header__navigation-wrapper {
@@ -37,17 +70,15 @@
 }
 
 .header__titles {
-  padding: 15px 20px 40px;
+  padding: 36px 26px 51px 26px;
   min-height: 171px;
 
   @media (min-width: @tablet-width) {
-    min-height: 330px;
-    padding: 36px 0 46px 0;
+    padding: 81px 0 74px 0;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 29px 0 67px 0;
-    min-height: 284px;
+    padding: 74px 0 104px 0;
   }
 }
 
@@ -65,5 +96,9 @@
     font-size: 50px;
     line-height: 68px;
     padding: 0 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0 170px;
   }
 }
