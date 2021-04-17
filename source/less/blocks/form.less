@@ -69,7 +69,19 @@
 }
 
 .form__button-submit {
-  width: 296px;
+  @media (min-width: @tablet-width) {
+    width: 296px;
+  }
+
+  &:focus,
+  &:hover {
+    background-color: @extra-green;
+    border: none;
+  }
+
+  &:active {
+    color: fade(@white, 30%);
+  }
 }
 
 .form__legend {
@@ -83,5 +95,17 @@
     display: flex;
     align-items: center;
     margin: 0;
+  }
+}
+
+.form__asterix {
+  color: @pink;
+}
+
+.form__text-desktop {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
   }
 }

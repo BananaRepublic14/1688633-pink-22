@@ -13,48 +13,50 @@
 </head>
 
 <body class="page-body">
-  <header class="header header--closed">
+  <header class="header header-catalog header-catalog--closed">
     <h1 class="visually-hidden">Сайт мобильного приложения «PINK»</h1>
 
     <div class="header__navigation-wrapper">
-      <nav class="main-navigation">
-        <div class="main-navigation__logo-wrapper">
-          <a class="main-navigation__logo" href="index.html">
-            <img class="main-navigation__image-mobile" src="img/logo/logo-mobile.svg" width="74" height="23"
-              alt="Логотип сайта мобильного приложения «PINK»">
-            <img class="main-navigation__image-tablet" src="img/logo/logo-tablet.svg" width="145" height="40"
-              alt="Логотип сайта мобильного приложения «PINK»">
-            <img class="main-navigation__image-desktop" src="img/logo/logo-header-desktop.svg" width="147" height="23"
-              alt="Логотип сайта мобильного приложения «PINK»">
-          </a>
+      <div class="container">
+        <nav class="main-navigation">
+          <div class="main-navigation__logo-wrapper">
+            <a class="main-navigation__logo" href="index.html">
+              <img class="main-navigation__image-mobile" src="img/logo/logo-mobile.svg" width="74" height="23"
+                alt="Логотип сайта мобильного приложения «PINK»">
+              <img class="main-navigation__image-tablet" src="img/logo/logo-tablet.svg" width="145" height="40"
+                alt="Логотип сайта мобильного приложения «PINK»">
+              <img class="main-navigation__image-desktop" src="img/logo/logo-header-desktop.svg" width="147" height="23"
+                alt="Логотип сайта мобильного приложения «PINK»">
+            </a>
 
-          <button class="main-navigation__toggle main-navigation__toggle--closed" type="button"><span class="visually-hidden">Открыть
-              меню</span></button>
-        </div>
+            <button class="main-navigation__toggle main-navigation__toggle--closed" type="button"><span class="visually-hidden">Открыть
+                меню</span></button>
+          </div>
 
-        <ul class="main-navigation__list main-navigation__list--closed list-reset">
-          <li class="main-navigation__item">
-            <a class="main-navigation__link" href="index.html">
-              Главная
-            </a>
-          </li>
-          <li class="main-navigation__item">
-            <a class="main-navigation__link" href="#">
-              Фотографии
-            </a>
-          </li>
-          <li class="main-navigation__item">
-            <a class="main-navigation__link" href="form.html">
-              Конкурс
-            </a>
-          </li>
-          <li class="main-navigation__item">
-            <a class="main-navigation__link" href="https://htmlacademy.ru/" target="_blank">
-              HTML Academy
-            </a>
-          </li>
-        </ul>
-      </nav>
+          <ul class="main-navigation__list main-navigation__list--closed list-reset">
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="index.html">
+                Главная
+              </a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="#">
+                Фотографии
+              </a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="form.html">
+                Конкурс
+              </a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="https://htmlacademy.ru/" target="_blank">
+                HTML Academy
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
 
     <div class="header__titles">
@@ -251,38 +253,51 @@
 
     <section class="workshop-photo">
       <h2 class="visually-hidden">Редактор Ваших фотографий</h2>
-      <div class="container">
-        <p class="workshop-photo__title">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
+      <p class="workshop-photo__title">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
 
-        <form class="workshop-photo__form grid-workshop" action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data">
+      <div class="workshop-photo__wrapper">
+        <form class="workshop-photo__form container" action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data">
 
-          <div class="workshop-photo__download-photo grid-workshop__item-1">
+          <div class="workshop-photo__download-photo">
             <p class="visually-hidden">Выберите изображение для поста:</p>
 
             <input class="visually-hidden" type="file" name="file" id="input-file">
-            <label for="input-file"><img class="workshop-photo__image-button" src="img/catalog-img/workshop-photo.jpg"
-                alt="Нажмите чтобы выбрать изображение"></label>
+            <label for="input-file"><img class="workshop-photo__image-button" src="img/catalog-img/workshop-photo.jpg" width="300"
+                height="400" alt="Нажмите чтобы выбрать изображение"></label>
           </div>
 
-          <div class="workshop-photo__elements grid-workshop__item-2">
+          <div class="workshop-photo__elements">
 
-            <div class="workshop-photo__elements-controls">
-              <div class="workshop-photo__range-controls-one">
+            <ul class="workshop-photo__elements-item list-reset">
+              <li class="workshop-photo__element-list">
                 <img src="img/svg-img/workshop-1.svg" width="44" height="44" alt="Элемент редактора">
-              </div>
-
-              <div class="workshop-photo__range-controls-two">
+              </li>
+              <li class="workshop-photo__element-list">
                 <img src="img/svg-img/workshop-2.svg" width="48" height="43" alt="Элемент редактора">
-              </div>
-
-              <div class="workshop-photo__range-controls-three">
+              </li>
+              <li class="workshop-photo__element-list">
                 <img src="img/svg-img/workshop-3.svg" width="32" height="32" alt="Элемент редактора">
-              </div>
+              </li>
+            </ul>
 
-              <div class="range-controls range-controls--adaptive">
-                <div class="range-controls__scale"></div>
-                <div class="range-controls__toggle" aria-label="Увеличить" tabindex="0" style="left: 75%;"></div>
-              </div>
+            <div class="range-controls range-controls--show">
+              <div class="range-controls__scale"></div>
+              <div class="range-controls__toggle" aria-label="Увеличить" tabindex="0" style="left: 80%;"></div>
+            </div>
+
+            <div class="range-controls range-controls--crop">
+              <div class="range-controls__scale"></div>
+              <div class="range-controls__toggle" aria-label="Увеличить" tabindex="0" style="left: 70%;"></div>
+            </div>
+
+            <div class="range-controls range-controls--fill">
+              <div class="range-controls__scale"></div>
+              <div class="range-controls__toggle" aria-label="Увеличить" tabindex="0" style="left: 25%;"></div>
+            </div>
+
+            <div class="range-controls range-controls--contrast">
+              <div class="range-controls__scale"></div>
+              <div class="range-controls__toggle" aria-label="Увеличить" tabindex="0" style="left: 50%;"></div>
             </div>
 
             <div class="workshop-photo__buttons">
@@ -291,8 +306,8 @@
                 type="reset">Отмена</button>
             </div>
           </div>
-        </form>
 
+        </form>
       </div>
     </section>
   </main>

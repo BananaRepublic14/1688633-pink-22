@@ -1,15 +1,148 @@
 .range-controls {
-  height: 60px;
   position: relative;
-  padding: 39px 20px 34px 20px;
   background-color: @silver;
-  display: none;
+  padding: 39px 20px 34px 20px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -20px;
+    right: -20px;
+    min-width: 320px;
+    height: 2px;
+    border-bottom: 1px solid fade(@dark-blue, 10%);
+
+    @media (min-width: @tablet-width) {
+      left: -20px;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: -48px;
+    }
+  }
+
+  &--show {
+    display: block;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
+  &--crop,
+  &--fill,
+  &--contrast {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+  }
+
+  &--crop {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      top: 30px;
+      left: -20px;
+      background-image: url("../../img/svg-img/workshop-1--tablet.svg");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+    }
+
+    @media (min-width: @desktop-width) {
+      &::before {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 20px;
+        left: -48px;
+        background-image: url("../../img/svg-img/workshop-1.svg");
+        background-position: 0 0;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  &--fill {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      top: 30px;
+      left: -20px;
+      background-image: url("../../img/svg-img/workshop-2--tablet.svg");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+    }
+
+    @media (min-width: @desktop-width) {
+      &::before {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 20px;
+        left: -48px;
+        background-image: url("../../img/svg-img/workshop-2.svg");
+        background-position: 0 0;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  &--contrast {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      top: 30px;
+      left: -20px;
+      background-image: url("../../img/svg-img/workshop-3--tablet.svg");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+    }
+
+    @media (min-width: @desktop-width) {
+      &::before {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 20px;
+        left: -48px;
+        background-image: url("../../img/svg-img/workshop-1.svg");
+        background-position: 0 0;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &::after {
+      content: none;
+    }
+  }
 }
 
 .range-controls__scale {
   width: 240px;
   height: 2px;
   background: @dark-blue;
+
+  @media (min-width: @tablet-width) {
+    width: 202px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 288px;
+    position: relative;
+    left: 48px;
+  }
 }
 
 .range-controls__toggle {
@@ -17,7 +150,6 @@
   top: 33px;
   width: 14px;
   height: 14px;
-  padding: 0;
   border: 2px solid @pink;
   background-color: @white;
   border-radius: 50%;

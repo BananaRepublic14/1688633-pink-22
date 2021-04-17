@@ -1,23 +1,25 @@
 .main-navigation {
-  margin: 0 auto;
-
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10px;
-    width: 940px;
     background-color: transparent;
+    padding: 27px 0 43px 0;
   }
 }
 
 .main-navigation__logo-wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 21px 20px;
+  align-items: center;
+  padding: 23px 0;
 
   @media (min-width: @tablet-width) {
-    padding: 27px 20px 43px 20px;
+    padding: 27px 0 43px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
   }
 }
 
@@ -100,7 +102,7 @@
 
 .main-navigation__link {
   display: block;
-  padding: 15px 20px;
+  padding: 15px 0;
   font-size: 18px;
   font-weight: 700;
   color: @white;
@@ -108,9 +110,22 @@
   text-decoration: none;
 
   @media (min-width: @desktop-width) {
-    padding: 0;
     font-weight: 400;
     text-transform: none;
+    padding: 0;
+  }
+
+  &:focus::after,
+  &:visited::after {
+    @media (min-width: @desktop-width) {
+      content: "";
+      position: absolute;
+      bottom: -19px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: @white;
+    }
   }
 
   &:hover {
@@ -131,7 +146,7 @@
   padding: 0;
   border: 0;
   width: 50px;
-  height: 24px;
+  height: 50px;
   color: @white;
   background-color: transparent;
 
@@ -144,7 +159,7 @@
     content: "";
     position: absolute;
     top: 50%;
-    right: -3px;
+    right: -2px;
     width: 28px;
     height: 4px;
     background-color: currentColor;

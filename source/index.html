@@ -17,44 +17,46 @@
     <h1 class="visually-hidden">Сайт мобильного приложения «PINK»</h1>
 
     <div class="header__navigation-wrapper">
-      <nav class="main-navigation">
-        <div class="main-navigation__logo-wrapper">
-          <a class="main-navigation__logo" href="index.html">
-            <img class="main-navigation__image-mobile" src="img/logo/logo-mobile.svg" width="74" height="23"
-              alt="Логотип сайта мобильного приложения «PINK»">
-            <img class="main-navigation__image-tablet" src="img/logo/logo-tablet.svg" width="145" height="40"
-              alt="Логотип сайта мобильного приложения «PINK»">
-            <img class="main-navigation__image-desktop" src="img/logo/logo-header-desktop.svg" width="147" height="23"
-              alt="Логотип сайта мобильного приложения «PINK»">
-          </a>
+      <div class="container">
+        <nav class="main-navigation">
+          <div class="main-navigation__logo-wrapper">
+            <a class="main-navigation__logo" href="#">
+              <img class="main-navigation__image-mobile" src="img/logo/logo-mobile.svg" width="74" height="23"
+                alt="Логотип сайта мобильного приложения «PINK»">
+              <img class="main-navigation__image-tablet" src="img/logo/logo-tablet.svg" width="145" height="40"
+                alt="Логотип сайта мобильного приложения «PINK»">
+              <img class="main-navigation__image-desktop" src="img/logo/logo-header-desktop.svg" width="147" height="23"
+                alt="Логотип сайта мобильного приложения «PINK»">
+            </a>
 
-          <button class="main-navigation__toggle main-navigation__toggle--closed" type="button"><span class="visually-hidden">Открыть
-              меню</span></button>
-        </div>
+            <button class="main-navigation__toggle main-navigation__toggle--closed" type="button"><span class="visually-hidden">Открыть
+                меню</span></button>
+          </div>
 
-        <ul class="main-navigation__list main-navigation__list--closed list-reset">
-          <li class="main-navigation__item">
-            <a class="main-navigation__link" href="#">
-              Главная
-            </a>
-          </li>
-          <li class="main-navigation__item">
-            <a class="main-navigation__link" href="catalog.html">
-              Фотографии
-            </a>
-          </li>
-          <li class="main-navigation__item">
-            <a class="main-navigation__link" href="form.html">
-              Конкурс
-            </a>
-          </li>
-          <li class="main-navigation__item">
-            <a class="main-navigation__link" href="https://htmlacademy.ru/" target="_blank">
-              HTML Academy
-            </a>
-          </li>
-        </ul>
-      </nav>
+          <ul class="main-navigation__list main-navigation__list--closed list-reset">
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="#">
+                Главная
+              </a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="catalog.html">
+                Фотографии
+              </a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="form.html">
+                Конкурс
+              </a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="https://htmlacademy.ru/" target="_blank">
+                HTML Academy
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
 
     <h2 class="visually-hidden">Скачать мобильное приложение «PINK»</h2>
@@ -175,7 +177,7 @@
         </button>
       </div>
 
-      <div class="slider-nav reviews__slider-nav ">
+      <div class="slider-nav reviews__slider-nav">
         <button class="slider-nav__slider-button slider-nav__slider-button--prev" type="button" aria-label="Назад">
         </button>
         <button class="slider-nav__slider-button slider-nav__slider-button--next" type="button" aria-label="Вперёд">
@@ -197,7 +199,7 @@
                 <span class="table-price__tariff">База</span>
                 <span class="table-price__value">1,99 USD</span>
               </th>
-              <th class="table-price__title">
+              <th class="table-price__title table-price__title--hit" data-hit-text="Хит">
                 <span class="table-price__tariff table-price__tariff--popular">Стандарт</span>
                 <span class="table-price__value">3,99 USD</span>
               </th>

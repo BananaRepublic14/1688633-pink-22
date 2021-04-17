@@ -1,7 +1,7 @@
 .promo-app {
   width: 280px;
   background-image: url("../../img/iphone--mobile.png");
-  background-position: 0 98px;
+  background-position: 0 108px;
   background-size: auto;
   background-repeat: no-repeat;
 
@@ -52,6 +52,17 @@
 
 .promo-app__button {
   margin: 0 0 32px 0;
+
+  &:focus,
+  &:hover {
+    background-color: @white;
+    color: @pink;
+    border: none;
+  }
+
+  &:active {
+    color: fade(@pink, 30%);
+  }
 
   @media (min-width: @tablet-width) {
     width: 300px;

@@ -9,8 +9,32 @@
   }
 }
 
-.workshop-photo__form {
+.workshop-photo__wrapper {
+  padding: 20px 0 0 0;
   background-color: @silver;
+
+  @media (min-width: @tablet-width) {
+    padding: 57px 0 54px 0;
+  }
+}
+
+.workshop-photo__form {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: minmax(300px, 380px) 1fr;
+    gap: 90px;
+  }
+}
+
+.workshop-photo__download-photo {
+  @media (min-width: @desktop-width) {
+    margin: 0 0 0 80px;
+  }
 }
 
 .workshop-photo__image-button {
@@ -18,27 +42,70 @@
   height: 100%;
 }
 
-.workshop-photo__elements-controls {
+.workshop-photo__elements {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.workshop-photo__elements-item {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   margin: 0;
   padding: 42px 0 0 0;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.workshop-photo__element-list {
+  margin: 0 35px 0 0;
+
+  &:last-child {
+    margin: 0;
+  }
 }
 
 .workshop-photo__buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0;
   padding: 38px 0 41px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 67px 0 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 166px 0 0 0;
+  }
 }
 
 .workshop-photo__button {
   margin: 0 0 12px 0;
 
+  @media (min-width: @desktop-width) {
+    width: 183px;
+    margin: 0 44px 0 0;
+  }
+
   &:last-child {
     margin: 0;
+  }
+
+  &:focus,
+  &:hover {
+    color: @white;
+    background-color: @pink;
+    border: none;
+  }
+
+  &:active {
+    color: fade(@white, 30%);
   }
 }
