@@ -99,18 +99,18 @@
 
       <div class="container">
         <ul class="presentation-app__list list-reset">
-          <li class="presentation-app__item presentation-app__item--phone-1">
+          <li class="presentation-app__item presentation-app__item--iphone-1">
             <h3 class="presentation-app__title">Поднимает настроение</h3>
             <p class="presentation-app__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько
               кликов!</p>
           </li>
-          <li class="presentation-app__item presentation-app__item--phone-2">
+          <li class="presentation-app__item presentation-app__item--iphone-2">
             <h3 class="presentation-app__title">Меняет мир вокруг</h3>
             <p class="presentation-app__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить&nbsp;
               эффект
             </p>
           </li>
-          <li class="presentation-app__item presentation-app__item--phone-3">
+          <li class="presentation-app__item presentation-app__item--iphone-3">
             <h3 class="presentation-app__title">Заводит новых друзей</h3>
             <p class="presentation-app__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями
               и заводите новых</p>
@@ -329,9 +329,16 @@
       </div>
 
       <div class="contacts__maps">
-        <img class="contacts__maps-mobile" src="img/map--mobile.png" width="320" height="200" alt="Адрес на карте">
-        <img class="contacts__maps-tablet" src="img/map--tablet.jpg" width="660" height="374" alt="Адрес на карте">
-        <img class="contacts__maps-desktop" src="img/map--desktop.jpg" width="1200" height="502" alt="Адрес на карте">
+        <picture>
+          <source type="image/webp" media="(min-width: 1200px)" srcset="../../img/map-desktop@1x.webp 1x, ../../img/map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 660px)" srcset="../../img/map-tablet@1x.webp 1x, ../../img/map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="../../img/map-mobile@1x.webp 1x, ../../img/map-mobile@2x.webp 2x">
+
+          <source media="(min-width: 1200px)" srcset="../../img/map-desktop@1x.jpg 1x, ../../img/map-desktop@2x.jpg 2x">
+          <source media="(min-width: 660px)" srcset="../../img/map-tablet@1x.jpg 1x, ../../img/map-tablet@2x.jpg 2x">
+          <img class="contacts__map-image" src="../../img/map-mobile@1x.jpg" srcset="../../img/map-mobile@2x.jpg 2x"
+            alt="Адрес офиса: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
+        </picture>
       </div>
 
     </section>
