@@ -20,17 +20,19 @@
       <div class="container">
         <nav class="main-navigation">
           <div class="main-navigation__logo-wrapper">
-            <a class="main-navigation__logo" href="#">
-              <img class="main-navigation__image-mobile" src="img/logo/logo-mobile.svg" width="74" height="23"
-                alt="Логотип сайта мобильного приложения «PINK»">
-              <img class="main-navigation__image-tablet" src="img/logo/logo-tablet.svg" width="145" height="40"
-                alt="Логотип сайта мобильного приложения «PINK»">
-              <img class="main-navigation__image-desktop" src="img/logo/logo-header-desktop.svg" width="147" height="23"
-                alt="Логотип сайта мобильного приложения «PINK»">
+            <a class="main-navigation__logo" aria-label="Логотип сайта Pink">
+              <svg class="main-navigation__image main-navigation__image--mobile" width="74" height="23">
+                <use xlink:href="img/logo/logo-mobile.svg#logo-mobile"></use>
+              </svg>
+              <svg class="main-navigation__image main-navigation__image--tablet" width="145" height="40">
+                <use xlink:href="img/logo/logo-tablet.svg#logo-tablet"></use>
+              </svg>
+              <svg class="main-navigation__image main-navigation__image--desktop" width="147" height="40">
+                <use xlink:href="img/logo/logo-desktop.svg#logo-desktop"></use>
+              </svg>
             </a>
 
-            <button class="main-navigation__toggle main-navigation__toggle--closed" type="button"><span class="visually-hidden">Открыть
-                меню</span></button>
+            <button class="main-navigation__toggle main-navigation__toggle--closed" type="button" aria-label="Меню"></button>
           </div>
 
           <ul class="main-navigation__list main-navigation__list--closed list-reset">
@@ -67,18 +69,24 @@
         <button class="button-index promo-app__button" type="button">Скачать приложение</button>
         <ul class="promo-app__list list-reset">
           <li class="promo-app__item">
-            <a href="#" class="promo-app__link">
-              <img src="img/logo/apple-logo.svg" width="47" height="56" alt="Скачать приложение для телефонов «Apple»">
+            <a class="promo-app__link" href="https://www.apple.com/ru/ios/app-store/" aria-label="ios">
+              <svg width="47" height="56">
+                <use xlink:href="img/logo/apple-logo.svg#apple-logo"></use>
+              </svg>
             </a>
           </li>
           <li class="promo-app__item">
-            <a href="#" class="promo-app__link">
-              <img src="img/logo/android-logo.svg" width="43" height="47" alt="Скачать приложение для телефонов «Android»">
+            <a class="promo-app__link" href="https://play.google.com/store" aria-label="android">
+              <svg width="43" height="47">
+                <use xlink:href="img/logo/android-logo.svg#android-logo"></use>
+              </svg>
             </a>
           </li>
           <li class="promo-app__item">
-            <a href="#" class="promo-app__link">
-              <img src="img/logo/microsoft-logo.svg" width="44" height="41" alt="Скачать приложение для устройств «Windows»">
+            <a class="promo-app__link" href="https://www.microsoft.com/ru-ru/store/apps/windows-phone" aria-label="windows">
+              <svg width="44" height="41">
+                <use xlink:href="img/logo/windows-logo.svg#windows-logo"></use>
+              </svg>
             </a>
           </li>
         </ul>
@@ -123,7 +131,9 @@
       <div class="container">
         <div class="information-app__wrapper">
           <div class="information-app__images">
-            <img class="information-app__image" width="238" height="276" src="img/svg-img/24-timer.svg" alt="Иллюстрация таймера">
+            <svg class="information-app__image" width="238" height="276">
+              <use xlink:href="img/svg-img/24-timer.svg#24-timer"></use>
+            </svg>
           </div>
           <div class="information-app__content">
             <h3 class="information-app__title">Эффект на&nbsp;24 часа!</h3>
@@ -163,9 +173,6 @@
             </blockquote>
           </li>
         </ul>
-
-        <img class="reviews__pic-decor" src="../../img/reviews-quotes.png" width="79" height="63" alt="Элемент декора">
-
       </div>
 
       <div class="reviews__slider-controls slider-controls">
@@ -330,13 +337,13 @@
 
       <div class="contacts__maps">
         <picture>
-          <source type="image/webp" media="(min-width: 1200px)" srcset="../../img/map-desktop@1x.webp 1x, ../../img/map-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 660px)" srcset="../../img/map-tablet@1x.webp 1x, ../../img/map-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="../../img/map-mobile@1x.webp 1x, ../../img/map-mobile@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 1200px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 660px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
 
-          <source media="(min-width: 1200px)" srcset="../../img/map-desktop@1x.jpg 1x, ../../img/map-desktop@2x.jpg 2x">
-          <source media="(min-width: 660px)" srcset="../../img/map-tablet@1x.jpg 1x, ../../img/map-tablet@2x.jpg 2x">
-          <img class="contacts__map-image" src="../../img/map-mobile@1x.jpg" srcset="../../img/map-mobile@2x.jpg 2x"
+          <source media="(min-width: 1200px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+          <source media="(min-width: 660px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+          <img class="contacts__map-image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x"
             alt="Адрес офиса: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
         </picture>
       </div>
@@ -347,41 +354,36 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__wrapper">
-        <a href="#" class="footer__logo">
-          <img class="footer__logo-image" src="img/logo/logo-footer.svg" width="145" height="40"
-            alt="Логотип сайта мобильного приложения «PINK»">
-          <img class="footer__logo-image footer__logo-image--show" src="img/logo/logo-footer-desktop.svg" width="145" height="40"
-            alt="Логотип сайта мобильного приложения «PINK»">
+        <a class="footer__logo" aria-label="Логотип сайта Pink">
+          <svg class="footer__logo-image" width="145" height="40">
+            <use xlink:href="img/logo/logo-footer.svg#logo-footer"></use>
+          </svg>
+          <svg class="footer__logo-image footer__logo-image--desktop" width="145" height="40">
+            <use xlink:href="img/logo/logo-footer-desktop.svg#logo-footer-desktop"></use>
+          </svg>
         </a>
 
         <div class="footer__social social">
           <ul class="social__list list-reset">
             <li class="social__item">
-              <a class="social__link" href="https://twitter.com/" target="_blank">
-                <span class="visually-hidden">Твиттер</span>
-                <svg class="social__image" aria-hidden="true" focusable="false" width="18" height="14" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M12 0h2l1 1h3l-1 1a2 2 0 001 0l-1 1-1 1c0 6-3 10-10 10H5s-4 0-5-2l5-1c-1 0-3 0-3-3h1C2 8 0 7 0 5h2C1 5 0 2 1 1c2 2 4 3 7 3l4-4z"
-                    fill="#D22856" />
+              <a class="social__link" href="https://twitter.com/" aria-label="twitter" target="_blank">
+                <svg class="social__twitter" width="18" height="14" focusable="false">
+                  <use xlink:href="img/logo/twitter.svg#twitter"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link" href="https://www.facebook.com/" target="_blank">
-                <span class="visually-hidden">Фейсбук</span>
-                <svg class="social__image" aria-hidden="true" focusable="false" width="9" height="18" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7 3h2V0H6C3 0 2 2 2 6H0v3h2v9h4V9h3V6H6l1-3z" fill="#D22856" />
+              <a class="social__link" href="https://www.facebook.com/" aria-label="facebook" target="_blank">
+                <svg class="social__facebook" width="9" height="18" focusable="false">
+                  <use xlink:href="img/logo/facebook.svg#facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link" href="https://www.youtube.com/" target="_blank">
-                <span class="visually-hidden">Ютуб</span>
-                <svg class="social__image" aria-hidden="true" focusable="false" width="15" height="13" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2 13a1 1 0 01-1 0l-1-1V1l1-1a1 1 0 011 0l12 6v1L2 13z" fill="#D22856" />
+              <a class="social__link" href="https://www.youtube.com/" aria-label="youtube" target="_blank">
+
+                <svg class="social__youtube" width="15" height="13" focusable="false">
+                  <use xlink:href="img/logo/youtube.svg#youtube"></use>
                 </svg>
               </a>
             </li>
@@ -389,9 +391,11 @@
         </div>
 
         <div class="footer__copyright">
-          <a class="footer__copyright-link" href="https://htmlacademy.ru" target="_blank">
+          <a class="footer__copyright-link" href="https://htmlacademy.ru" aria-label="Логотип HTML Academy" target="_blank">
             <b class="footer__copyright-text">Разработано</b>
-            <img src="img/logo/logo-html-academy.svg" width="27" height="34" alt="Логотип компании «HTML Academy»">
+            <svg class="footer__copyright-icon" width="27" height="34">
+              <use xlink:href="img/logo/logo-html-academy.svg#logo-html-academy"></use>
+            </svg>
           </a>
         </div>
       </div>

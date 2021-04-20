@@ -25,17 +25,42 @@
   display: block;
   margin: 0;
   padding: 0;
+  color: @dark-blue;
+  fill: @pink;
+
+  &:focus,
+  &:hover {
+    color: @pink;
+  }
+
+  &:active {
+    color: fade(@dark-blue, 30%);
+    fill: fade(@pink, 30%);
+  }
 
   @media (min-width: @desktop-width) {
     display: none;
   }
-}
 
-.footer__logo-image--show {
-  display: none;
+  &--desktop {
+    display: none;
+    color: @dark-blue;
+    fill: @pink;
 
-  @media (min-width: @desktop-width) {
-    display: block;
+    &:focus,
+    &:hover {
+      color: @pink;
+      fill: @dark-blue;
+    }
+
+    &:active {
+      color: fade(@dark-blue, 30%);
+      fill: fade(@pink, 30%);
+    }
+
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
   }
 }
 
@@ -54,4 +79,17 @@
   line-height: 18px;
   margin: 0 15px 0 0;
   color: @dark-blue;
+}
+
+.footer__copyright-icon {
+  color: @pink;
+
+  &:focus,
+  &:hover {
+    color: @dark-blue;
+  }
+
+  &:active {
+    color: fade(@dark-blue, 30%);
+  }
 }
