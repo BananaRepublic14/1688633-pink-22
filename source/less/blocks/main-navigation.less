@@ -24,40 +24,67 @@
 }
 
 .main-navigation__logo {
-  width: 74px;
-
-  @media (min-width: @tablet-width) {
-    width: 145px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 147px;
-  }
+  display: flex;
+  align-items: center;
 }
 
-.main-navigation__image-mobile {
-  @media (min-width: @tablet-width) {
+.main-navigation__image {
+  display: block;
+  color: @white;
+  fill: @pink;
+
+  &--mobile {
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+
+    &:focus,
+    &:hover {
+      color: @pink;
+    }
+
+    &:active {
+      color: fade(@pink, 30%);
+    }
+  }
+
+  &--tablet {
     display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+
+    &:focus,
+    &:hover {
+      color: @pink;
+    }
+
+    &:active {
+      color: fade(@pink, 30%);
+    }
   }
-}
 
-.main-navigation__image-tablet {
-  display: none;
-
-  @media (min-width: @tablet-width) {
-    display: block;
-  }
-
-  @media (min-width: @desktop-width) {
+  &--desktop {
     display: none;
-  }
-}
 
-.main-navigation__image-desktop {
-  display: none;
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
 
-  @media (min-width: @desktop-width) {
-    display: block;
+    &:focus,
+    &:hover {
+      color: @pink;
+    }
+
+    &:active {
+      color: fade(@pink, 30%);
+      fill: fade(@pink, 30%);
+    }
   }
 }
 
@@ -68,11 +95,12 @@
   line-height: 32px;
 
   @media (min-width: @desktop-width) {
+    width: 632px;
+    line-height: 18px;
     display: flex;
     flex-wrap: wrap;
-    width: 632px;
+    align-self: flex-end;
     border-top: 0;
-    line-height: 18px;
   }
 
   // Список меню
@@ -88,7 +116,7 @@
   text-align: center;
 
   @media (min-width: @desktop-width) {
-    margin: 10px 0;
+    margin: 5px 0;
     padding: 0;
     border: 0;
   }
@@ -163,6 +191,10 @@
     width: 28px;
     height: 4px;
     background-color: currentColor;
+
+    @media (min-width: @tablet-width) {
+      top: 65%;
+    }
   }
 
   &::before {
@@ -191,8 +223,7 @@
   //   &::before {
   //     content: "";
   //     position: absolute;
-  //     top: 0;
-  //     left: 0;
+  //     top: 44%;
   //     right: 0;
   //     transform: none;
   //     width: 50px;
