@@ -12,8 +12,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body class="page-body">
-  <header class="header header-catalog header-catalog--closed">
+<body class="page-body show-menu">
+  <header class="header header-catalog">
     <h1 class="visually-hidden">Сайт мобильного приложения «PINK»</h1>
 
     <div class="header__navigation-wrapper">
@@ -32,10 +32,10 @@
               </svg>
             </a>
 
-            <button class="main-navigation__toggle main-navigation__toggle--closed" type="button" aria-label="Меню"></button>
+            <button class="main-navigation__toggle" type="button" aria-label="Меню"></button>
           </div>
 
-          <ul class="main-navigation__list main-navigation__list--closed list-reset">
+          <ul class="main-navigation__list list-reset">
             <li class="main-navigation__item">
               <a class="main-navigation__link" href="index.html">
                 Главная
@@ -71,7 +71,8 @@
 
     <section class="photo">
       <h2 class="visually-hidden">Галерея фотографий пользоватлей приложения</h2>
-      <p class="photo__title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает
+      <p class="photo__title">Взгляните на фотографии, которые выкладывают пользователи! <br class="photo__title--show-desktop"> Видите, как
+        не хватает
         ваших?
       </p>
 
@@ -89,8 +90,8 @@
               srcset="img/catalog-img/panorama-desktop@1x.jpg 1x, img/catalog-img/panorama-desktop@2x.jpg 2x">
             <source media="(min-width: 660px)"
               srcset="img/catalog-img/panorama-tablet@1x.jpg 1x, img/catalog-img/panorama-tablet@2x.jpg 2x">
-            <img class="photo__image" src="img/catalog-img/panorama-mobile@1x.jpg" srcset="img/catalog-img/panorama-mobile@2x.jpg 2x"
-              alt="Фотография дня">
+            <img class="photo__image photo__image--panorama" src="img/catalog-img/panorama-mobile@1x.jpg"
+              srcset="img/catalog-img/panorama-mobile@2x.jpg 2x" alt="Фотография дня">
           </picture>
         </a>
 
@@ -101,7 +102,8 @@
               <time class="photo__date" datetime="2021-04-18T18:00">(5 минут назад)</time>
             </p>
 
-            <p class="photo__text photo__text--full">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую
+            <p class="photo__text photo__text--full">Прыгать или нет? Напишите в коментарии свой совет и <br
+                class="photo__text--show-tablet"> смотрите прямую
               трансляцию в перископе, задавайте свои вопросы!</p>
 
             <div class="photo__likes photo__likes--full">
@@ -359,51 +361,50 @@
 
           <div class="workshop-photo__elements">
 
-            <ul class="workshop-photo__elements-item list-reset">
-              <li class="workshop-photo__element-list">
-                <img src="img/svg-img/workshop-1.svg" width="44" height="44" alt="Элемент редактора">
-              </li>
-              <li class="workshop-photo__element-list">
-                <img src="img/svg-img/workshop-2.svg" width="48" height="43" alt="Элемент редактора">
-              </li>
-              <li class="workshop-photo__element-list">
-                <img src="img/svg-img/workshop-3.svg" width="32" height="32" alt="Элемент редактора">
-              </li>
-            </ul>
+            <div class="workshop-photo__filter">
+              <div class="workshop-photo__filter-buttons">
+                <button data-filter="1" type="button" class="workshop-photo__filter-button">
+                  <svg class="workshop-photo__crop-icon" width="44" height="44">
+                    <use xlink:href="img/svg-img/workshop-1.svg#workshop-1"></use>
+                  </svg>
+                </button>
+                <button data-filter="2" type="button" class="workshop-photo__filter-button">
+                  <svg class="workshop-photo__fill-icon" width="48" height="43">
+                    <use xlink:href="img/svg-img/workshop-2.svg#workshop-2"></use>
+                  </svg>
+                </button>
+                <button data-filter="3" type="button" class="workshop-photo__filter-button">
+                  <svg class="workshop-photo__contrast-icon" width="32" height="32">
+                    <use xlink:href="img/svg-img/workshop-3.svg#workshop-3"></use>
+                  </svg>
+                </button>
+              </div>
 
-            <div class="range-controls range-controls--show">
-              <div class="range-controls__scale"></div>
-              <div class="range-controls__toggle" aria-label="Увеличить" tabindex="0" style="left: 80%;"></div>
-            </div>
-
-            <div class="range-controls range-controls--crop">
-              <div class="range-controls__scale"></div>
-              <div class="range-controls__toggle" aria-label="Увеличить" tabindex="0" style="left: 70%;"></div>
-            </div>
-
-            <div class="range-controls range-controls--fill">
-              <div class="range-controls__scale"></div>
-              <div class="range-controls__toggle" aria-label="Увеличить" tabindex="0" style="left: 25%;"></div>
-            </div>
-
-            <div class="range-controls range-controls--contrast">
-              <div class="range-controls__scale"></div>
-              <div class="range-controls__toggle" aria-label="Увеличить" tabindex="0" style="left: 50%;"></div>
+              <ul class="workshop-photo__filter-list">
+                <li data-filter="1" class="workshop-photo__filter-item workshop-photo__filter-item--active">
+                  <input type="range" class="workshop-photo__range-input" min="0" max="100" step="1" value="86">
+                </li>
+                <li data-filter="2" class="workshop-photo__filter-item">
+                  <input type="range" class="workshop-photo__range-input" min="0" max="100" step="1" value="14">
+                </li>
+                <li data-filter="3" class="workshop-photo__filter-item">
+                  <input type="range" class="workshop-photo__range-input" min="0" max="100" step="1" value="50">
+                </li>
+              </ul>
             </div>
 
             <div class="workshop-photo__buttons">
-              <button class="workshop-photo__button button-catalog button-catalog--adaptive" type="submit">Запостить</button>
-              <button class="workshop-photo__button button-catalog button-catalog--adaptive button-catalog--disabled"
-                type="reset">Отмена</button>
+              <button class="workshop-photo__button button-catalog" type="submit">Запостить</button>
+              <button class="workshop-photo__button button-catalog" type="reset">Отмена</button>
             </div>
-          </div>
 
+          </div>
         </form>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer footer--catalog">
     <div class="container">
       <div class="footer__wrapper">
         <a class="footer__logo" aria-label="Логотип сайта Pink">
@@ -443,8 +444,8 @@
         </div>
 
         <div class="footer__copyright">
+          <p class="footer__copyright-text">Разработано</p>
           <a class="footer__copyright-link" href="https://htmlacademy.ru" aria-label="Логотип HTML Academy" target="_blank">
-            <b class="footer__copyright-text">Разработано</b>
             <svg class="footer__copyright-icon" width="27" height="34">
               <use xlink:href="img/logo/logo-html-academy.svg#logo-html-academy"></use>
             </svg>

@@ -2,10 +2,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 12px;
+  height: 14px;
 
   @media (min-width: @desktop-width) {
     display: none;
+  }
+
+  &--show {
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
   }
 }
 

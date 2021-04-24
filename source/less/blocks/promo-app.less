@@ -1,36 +1,39 @@
 .promo-app {
   width: 280px;
   background-image: url("../img/iphone-hand-mobile@1x.png");
-  background-position: 0 108px;
-  background-size: auto;
+  background-position: -20px 88px;
   background-repeat: no-repeat;
 
   @media @retina {
     background-image: url("../img/iphone-hand-mobile@2x.png");
+    background-position: -23px 85px;
+    background-size: 94% 47%;
   }
 
   @media (min-width: @tablet-width) {
     width: 620px;
     background-image: url("../img/iphone-hand-tablet@1x.png");
-    background-position: -36px 110px;
-    background-size: auto;
-    padding: 93px 0 110px 0;
+    background-position: -40px 74px;
+    padding: 94px 0 114px 0;
 
     @media @retina {
       background-image: url("../img/iphone-hand-tablet@2x.png");
+      background-position: -45px 70px;
+      background-size: 114% 89%;
     }
   }
 
   @media (min-width: @desktop-width) {
     width: 940px;
     background-image: url("../img/iphone-hand-desktop@1x.png");
-    background-position: 15px 145px;
-    background-size: auto;
-    padding: 98px 10px 130px 10px;
-  }
+    background-position: 15px 99px;
+    padding: 98px 0 125px 0;
 
-  @media @retina {
-    background-image: url("../img/iphone-hand-desktop@2x.png");
+    @media @retina {
+      background-image: url("../img/iphone-hand-desktop@2x.png");
+      background-position: 20px 100px;
+      background-size: 111% 87%;
+    }
   }
 }
 
@@ -46,19 +49,20 @@
   line-height: 33px;
   text-align: center;
   color: @white;
-  margin: 29px 0 348px 0;
-  padding: 0 30px;
+  margin: 20px 0 336px 0;
+  padding: 0;
 
   @media (min-width: @tablet-width) {
     font-size: 40px;
     line-height: 48px;
-    margin: 28px 0 39px 0;
+    margin: 0 0 30px 0;
+    padding: 0 30px;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 50px;
     line-height: 68px;
-    margin: 16px 0 51px 0;
+    margin: 0 0 38px 0;
   }
 }
 
@@ -84,6 +88,7 @@
 
   @media (min-width: @desktop-width) {
     margin: 0 0 67px 0;
+    font-size: 21px;
   }
 }
 
@@ -109,14 +114,14 @@
   font-weight: 300;
   color: @white;
   text-align: center;
-  margin: 28px 0 0 0;
+  margin: 14px 0 0 0;
 
   @media (min-width: @tablet-width) {
     font-size: 18px;
-    line-height: 24px;
+    margin: 25px 0 0 0;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 58px 0 0 0;
+    margin: 45px 0 0 0;
   }
 }

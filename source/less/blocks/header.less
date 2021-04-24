@@ -2,11 +2,11 @@
   position: relative;
   background-color: @dark-blue;
   background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-position: 50% 353px;
-  background-size: 100% 40%;
+  background-position: center 324px;
+  background-size: 230% 40%;
   background-repeat: no-repeat;
   color: @white;
-  padding: 0 0 38px 0;
+  padding: 0 0 31px 0;
 
   @media @retina {
     background-image: url("../img/bg-back-mobile@2x.jpg");
@@ -14,7 +14,7 @@
 
   @media (min-width: @tablet-width) {
     background-image: url("../img/bg-back-tablet@1x.jpg");
-    background-position: 50% 378px;
+    background-position: 50% 365px;
     background-size: 100% 65%;
     padding: 0;
 
@@ -33,44 +33,22 @@
     }
   }
 
-  // При закрытом меню добавляется этот класс и смещается фон.
-  // &--closed {
-  //   background-position: 50% 72px;
-  //   background-size: 100% 53%;
-  // }
-
   &-form,
   &-catalog {
-    background-position: 50% 353px;
+    background-position: 50% 326px;
     background-size: 100% 60%;
     padding: 0;
 
     @media (min-width: @tablet-width) {
-      background-position: 50% 377px;
+      background-position: 50% 365px;
       background-size: 100% 80%;
     }
 
     @media (min-width: @desktop-width) {
       background-position: 50% 0;
-      background-size: 100% 215%;
+      background-size: 200% 200%;
     }
   }
-
-  // При закрытом меню добавлятся этот класс и смещается фон.
-  // &-form {
-  //   &--closed {
-  //     background-position: 50% 0;
-  //     background-size: 100% 195%;
-  //   }
-  // }
-
-  // При закрытом меню добавлятся этот класс и смещается фон.
-  // &-catalog {
-  //   &--closed {
-  //     background-position: 50% 0;
-  //     background-size: 100% 195%;
-  //   }
-  // }
 }
 
 .header__navigation-wrapper {
@@ -82,15 +60,17 @@
 }
 
 .header__titles {
-  padding: 36px 26px 51px 26px;
-  min-height: 171px;
+  padding: 27px 20px 0 20px;
+  min-height: 169px;
 
   @media (min-width: @tablet-width) {
-    padding: 81px 0 74px 0;
+    min-height: 330px;
+    padding: 66px 20px 0 20px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 74px 0 104px 0;
+    min-height: 284px;
+    padding: 59px 0 0 0;
   }
 }
 
@@ -110,7 +90,13 @@
     padding: 0 20px;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     padding: 0 170px;
+  }
+
+  &--form {
+    @media (min-width: @desktop-width) {
+      padding: 0 100px;
+    }
   }
 }

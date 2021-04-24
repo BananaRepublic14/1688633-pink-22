@@ -10,7 +10,7 @@
   background-color: @white;
   text-align: center;
   margin: 0 auto;
-  box-shadow: 0 10px 20px fade(@black, 40%);
+  box-shadow: 0 7px 15px fade(@black, 15%);
 
   @media (min-width: @tablet-width) {
     width: 460px;
@@ -21,7 +21,7 @@
   }
 
   &--error {
-    // display: none;
+    display: none;
     padding: 0 0 52px 0;
 
     @media (min-width: @desktop-width) {
@@ -29,9 +29,9 @@
     }
   }
 
-  // &--verification {
-  //   display: none;
-  // }
+  &--verification {
+    display: none;
+  }
 }
 
 .form-popup__title {
@@ -66,6 +66,7 @@
   text-align: center;
   margin: 0;
   padding: 0 0 50px 0;
+  word-wrap: break-word;
 
   @media (min-width: @tablet-width) {
     font-size: 18px;

@@ -1,6 +1,6 @@
 .form-textarea {
   margin: 0;
-  padding: 42px 0 52px 0;
+  padding: 39px 0 43px 0;
 
   @media (min-width: @tablet-width) {
     order: 4;
@@ -12,6 +12,7 @@
   margin: 0;
   padding: 0;
   border: 0;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     border: 2px solid @lightgray;
@@ -26,34 +27,51 @@
   color: @pink;
   margin: 0;
   padding: 0 38px;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: -3%;
+    left: 29%;
+    background-color: @white;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -5%;
+    left: 36%;
+  }
 }
 
 .form-textarea__item {
   margin: 0;
-  padding: 22px 0 0 0;
+  padding: 16px 0 0 0;
 
   @media (min-width: @tablet-width) {
-    padding: 42px 62px 53px 60px;
+    padding: 44px 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 42px 60px 35px 60px;
   }
 }
 
 .form-textarea__input {
   width: 100%;
-  height: 197px;
+  height: 201px;
   font-size: 18px;
   line-height: 30px;
   border: 2px solid @gray;
   border-radius: 1px;
   margin: 0;
-  padding: 23px;
+  padding: 14px 20px 0 20px;
   resize: none;
 
   @media (min-width: @tablet-width) {
-    height: 189px;
+    height: 193px;
+    padding: 14px 10px 0 17px;
   }
 
   @media (min-width: @desktop-width) {
-    height: 124px;
+    height: 128px;
   }
 
   &:hover {
