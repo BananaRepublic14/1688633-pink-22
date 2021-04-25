@@ -2,10 +2,15 @@
   line-height: 30px;
   text-align: center;
   margin: 0;
-  padding: 49px 20px 52px 20px;
+  padding: 23px 20px 42px 20px;
 
   @media (min-width: @tablet-width) {
     font-size: 18px;
+    padding: 46px 20px 70px 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 39px 20px 65px 20px;
   }
 }
 
@@ -14,7 +19,11 @@
   background-color: @silver;
 
   @media (min-width: @tablet-width) {
-    padding: 57px 0 54px 0;
+    padding: 57px 0 47px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 59px 0 51px 0;
   }
 }
 
@@ -22,7 +31,7 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
+    gap: 40px;
   }
 
   @media (min-width: @desktop-width) {
@@ -32,62 +41,287 @@
 }
 
 .workshop-photo__download-photo {
+  display: flex;
+  justify-content: center;
+
   @media (min-width: @desktop-width) {
     margin: 0 0 0 80px;
   }
 }
 
-.workshop-photo__image-button {
-  width: 100%;
-  height: 100%;
+.workshop-photo__image {
+  max-width: none;
 }
 
-.workshop-photo__elements {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.workshop-photo__elements-item {
-  display: flex;
-  flex-wrap: wrap;
+.workshop-photo__filter {
+  width: 240px;
+  display: grid;
   justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 42px 0 0 0;
+  row-gap: 25px;
+  margin: 0 auto;
+  padding: 35px 0 15px 0;
 
   @media (min-width: @tablet-width) {
-    display: none;
+    grid-template-columns: 50px 1fr;
+    row-gap: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 410px;
   }
 }
 
-.workshop-photo__element-list {
-  margin: 0 35px 0 0;
+// Декоративные кнопки
 
-  &:last-child {
+.workshop-photo__filter-buttons {
+  display: flex;
+  justify-content: center;
+  column-gap: 35px;
+  row-gap: 40px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
+    align-items: center;
+    column-gap: 0;
+    row-gap: 25px;
     margin: 0;
   }
 }
+
+.workshop-photo__filter-button {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  flex-shrink: 0;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+
+  // @media (min-width: @tablet-width) {
+  //   pointer-events: none;
+  // }
+}
+
+.workshop-photo__crop-icon {
+  @media (min-width: @tablet-width) {
+    position: relative;
+    top: -4px;
+    left: 1px;
+    width: 22px;
+    height: 22px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    top: -4px;
+    left: -3px;
+    width: 44px;
+    height: 44px;
+  }
+}
+
+.workshop-photo__fill-icon {
+  @media (min-width: @tablet-width) {
+    position: relative;
+    top: -5px;
+    left: 1px;
+    width: 24px;
+    height: 22px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    top: -6px;
+    left: -1px;
+    width: 48px;
+    height: 43px;
+  }
+}
+
+.workshop-photo__contrast-icon {
+  @media (min-width: @tablet-width) {
+    position: relative;
+    top: -11px;
+    left: 1px;
+    width: 16px;
+    height: 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    top: -11px;
+    left: -3px;
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.workshop-photo__crop-icon,
+.workshop-photo__fill-icon,
+.workshop-photo__contrast-icon {
+  color: fade(@dark-blue, 30%);
+
+  &:focus,
+  &:hover {
+    color: fade(@dark-blue, 50%);
+  }
+
+  &:active {
+    color: @pink;
+  }
+}
+
+// Элементы управления
+
+.workshop-photo__filter-list {
+  position: relative;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    gap: 10px;
+  }
+}
+
+.workshop-photo__filter-item {
+  flex-grow: 1;
+  display: none;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    min-width: 320px;
+    left: -40px;
+    top: 43px;
+    border: 1px solid fade(@dark-blue, 10%);
+    transform: rotate(180deg);
+
+    @media (min-width: @tablet-width) {
+      min-width: 280px;
+      left: -53px;
+    }
+
+    @media (min-width: @desktop-width) {
+      min-width: 410px;
+      left: -45px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    transform: translate(-5px, 13px);
+  }
+
+  &--active {
+    display: block;
+  }
+}
+
+.workshop-photo__range-input {
+  width: 240px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  appearance: none;
+
+  @media (min-width: @tablet-width) {
+    width: 202px;
+    transform: translateX(22px);
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 288px;
+    transform: translateX(11px);
+  }
+}
+
+.workshop-photo__range-input::-webkit-slider-thumb:active {
+  background-color: #d22856;
+}
+
+.workshop-photo__range-input::-moz-range-thumb:active {
+  background-color: #d22856;
+}
+
+.workshop-photo__range-input::-moz-focus-outer {
+  border: none;
+}
+
+.workshop-photo__range-input::-webkit-slider-runnable-track {
+  height: 2px;
+  background-color: @black;
+}
+
+.workshop-photo__range-input::-webkit-slider-thumb {
+  width: 10px;
+  height: 10px;
+  margin: -7px 0 0 0;
+  border: 2px solid @pink;
+  border-radius: 50%;
+  background-color: @white;
+  cursor: pointer;
+  appearance: none;
+  box-sizing: content-box;
+}
+
+.workshop-photo__range-input::-moz-range-track {
+  width: 240px;
+  height: 2px;
+  background-color: @black;
+  outline: none;
+  border: none;
+  appearance: none;
+}
+
+.workshop-photo__range-input::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border: 2px solid @pink;
+  border-radius: 50%;
+  background-color: @white;
+  cursor: pointer;
+  appearance: none;
+}
+
+// Кнопка отправки фото
 
 .workshop-photo__buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 38px 0 41px 0;
+  padding: 50px 0 41px 0;
 
   @media (min-width: @tablet-width) {
-    padding: 67px 0 0 0;
+    padding: 0 0 0 7px;
+    align-items: stretch;
   }
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
     align-items: flex-start;
-    padding: 166px 0 0 0;
+    padding: 145px 0 0 0;
   }
 }
 
 .workshop-photo__button {
+  width: 280px;
+  height: 50px;
   margin: 0 0 12px 0;
+
+  @media (min-width: @tablet-width) {
+    width: 260px;
+    margin: 65px 0 25px 0;
+  }
 
   @media (min-width: @desktop-width) {
     width: 183px;
@@ -97,7 +331,9 @@
   &:last-child {
     margin: 0;
   }
+}
 
+.workshop-photo__buttons button[type="submit"] {
   &:focus,
   &:hover {
     color: @white;
@@ -107,5 +343,20 @@
 
   &:active {
     color: fade(@white, 30%);
+  }
+}
+
+.workshop-photo__buttons button[type="reset"] {
+  color: fade(@dark-blue, 10%);
+
+  &:focus,
+  &:hover {
+    color: fade(@dark-blue, 30%);
+  }
+
+  &:active {
+    color: @white;
+    background-color: fade(@dark-blue, 30%);
+    border: none;
   }
 }

@@ -1,7 +1,7 @@
 .form-radiobox {
   background-color: @silver;
   margin: 0 -20px;
-  padding: 42px 0 54px 0;
+  padding: 39px 0 45px 0;
 
   @media (min-width: @tablet-width) {
     background-color: @white;
@@ -15,6 +15,7 @@
   margin: 0;
   padding: 0;
   border: none;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     border: 2px solid @lightgray;
@@ -29,21 +30,37 @@
   color: @pink;
   margin: 0;
   padding: 0 25px;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: -3%;
+    left: 20%;
+    background-color: @white;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -14px;
+    left: 30px;
+  }
 }
 
 .form-radiobox__list {
   margin: 0;
-  padding: 52px 0 0 0;
+  padding: 39px 0 0 0;
 
   @media (min-width: @tablet-width) {
-    padding: 61px 0 66px 0;
+    padding: 57px 40px 57px 37px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 53px 40px 60px 40px;
   }
 }
 
 .form-radiobox__item {
   font-size: 18px;
   line-height: 30px;
-  margin: 0 0 60px 0;
+  margin: 0 0 45px 0;
 
   &:last-child {
     margin: 0;
@@ -55,7 +72,15 @@
   display: block;
   cursor: pointer;
   user-select: none;
-  padding: 0 0 0 80px;
+  padding: 0 0 0 90px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 0 0 82px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 0 0 91px;
+  }
 }
 
 .form-radiobox__input {
@@ -69,6 +94,11 @@
     border-radius: 50%;
     border: 2px solid @gray;
     background-color: @white;
+
+    @media (min-width: @desktop-width) {
+      top: -3px;
+      left: 31px;
+    }
   }
 
   &:checked + .form-radiobox__label::after {
@@ -80,6 +110,10 @@
     height: 15px;
     border-radius: 50%;
     background-color: @pink;
+
+    @media (min-width: @desktop-width) {
+      left: 42px;
+    }
   }
 
   & + .form-radiobox__label:hover::before {

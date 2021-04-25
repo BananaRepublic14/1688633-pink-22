@@ -2,9 +2,12 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 300px));
   justify-content: center;
-  gap: 20px;
+
+  @media (min-width: @tablet-width) {
+    column-gap: 20px;
+  }
 
   @media (min-width: @desktop-width) {
-    row-gap: 54px;
+    row-gap: 34px;
   }
 }

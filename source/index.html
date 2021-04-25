@@ -12,8 +12,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body class="page-body">
-  <header class="header header--closed">
+<body class="page-body show-menu">
+  <header class="header">
     <h1 class="visually-hidden">Сайт мобильного приложения «PINK»</h1>
 
     <div class="header__navigation-wrapper">
@@ -32,10 +32,10 @@
               </svg>
             </a>
 
-            <button class="main-navigation__toggle main-navigation__toggle--closed" type="button" aria-label="Меню"></button>
+            <button class="main-navigation__toggle" type="button" aria-label="Меню"></button>
           </div>
 
-          <ul class="main-navigation__list main-navigation__list--closed list-reset">
+          <ul class="main-navigation__list list-reset">
             <li class="main-navigation__item">
               <a class="main-navigation__link" href="#">
                 Главная
@@ -114,7 +114,8 @@
           </li>
           <li class="presentation-app__item presentation-app__item--iphone-2">
             <h3 class="presentation-app__title">Меняет мир вокруг</h3>
-            <p class="presentation-app__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить&nbsp;
+            <p class="presentation-app__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы <br
+                class="presentation-app__text--show-tablet"> усилить
               эффект
             </p>
           </li>
@@ -136,9 +137,9 @@
             </svg>
           </div>
           <div class="information-app__content">
-            <h3 class="information-app__title">Эффект на&nbsp;24 часа!</h3>
-            <p class="information-app__description">Британские ученые провели исследования и&nbsp;доказали, что&nbsp;положительный эффект
-              от&nbsp;использования приложения длится целые&nbsp;сутки!</p>
+            <h3 class="information-app__title">Эффект <br class="information-app__title--show-tablet"> на 24 часа!</h3>
+            <p class="information-app__description">Британские ученые провели исследования и доказали, что&nbsp;положительный эффект
+              от&nbsp;использования приложения <br class="information-app__description--show-desktop"> длится целые&nbsp;сутки!</p>
             <a href="#" class="information-app__link">Узнать больше об исследовании</a>
           </div>
         </div>
@@ -150,7 +151,7 @@
 
       <div class="reviews__wrapper container">
         <ul class="reviews__list">
-          <li class="reviews__item reviews__slider reviews__slider--current">
+          <li class="reviews__item reviews__slider">
             <blockquote class="reviews__show">
               <p class="reviews__autor-name">Николай Петров</p>
               <span class="reviews__autor-info">25 лет, водитель трамвая</span>
@@ -301,7 +302,7 @@
           </tbody>
         </table>
 
-        <div class="price__slider-controls slider-controls">
+        <div class="price__slider-controls slider-controls slider-controls--show">
           <button class="slider-controls__button" type="button" aria-label="1">
           </button>
           <button class="slider-controls__button slider-controls__button--current" type="button" aria-label="2">
@@ -391,8 +392,8 @@
         </div>
 
         <div class="footer__copyright">
+          <p class="footer__copyright-text">Разработано</p>
           <a class="footer__copyright-link" href="https://htmlacademy.ru" aria-label="Логотип HTML Academy" target="_blank">
-            <b class="footer__copyright-text">Разработано</b>
             <svg class="footer__copyright-icon" width="27" height="34">
               <use xlink:href="img/logo/logo-html-academy.svg#logo-html-academy"></use>
             </svg>

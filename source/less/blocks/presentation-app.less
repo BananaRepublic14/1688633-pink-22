@@ -7,7 +7,6 @@
 
   @media (min-width: @tablet-width) {
     background-size: 100% 50px;
-    margin: 0 0 55px 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -21,7 +20,7 @@
   flex-wrap: wrap;
   justify-content: center;
   margin: 0 auto;
-  padding: 65px 0 305px 0;
+  padding: 85px 0 287px 0;
   list-style: none;
   background-image: url("../img/iphone-img/iphone-screen-mobile@1x.png");
   background-position: 50% ~"calc(100% + 43px)";
@@ -29,6 +28,8 @@
 
   @media @retina {
     background-image: url("../img/iphone-img/iphone-screen-mobile@2x.png");
+    background-position: 50% ~"calc(100% + 43px)";
+    background-size: 55% 40%;
   }
 
   @media (min-width: @tablet-width) {
@@ -36,11 +37,13 @@
     flex-direction: column;
     align-items: flex-end;
     background-image: url("../img/iphone-img/iphone-screen-3-tablet@1x.png");
-    background-position: 0 0;
-    padding: 0;
+    background-position: 0 10px;
+    padding: 80px 0 10px 0;
 
     @media @retina {
       background-image: url("../img/iphone-img/iphone-screen-3-tablet@2x.png");
+      background-position: 0 13px;
+      background-size: 43% 97%;
     }
   }
 
@@ -55,53 +58,60 @@
 }
 
 .presentation-app__item {
-  margin: 0 0 13px 0;
   width: 280px;
   text-align: center;
   background-position: 50% 0;
   background-repeat: no-repeat;
+  margin: 0 0 31px 0;
 
   @media (min-width: @tablet-width) {
-    margin: 0;
     width: 310px;
     text-align: left;
+    margin: 0 0 34px 0;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 339px 0 0 0;
     width: 240px;
     line-height: 30px;
     text-align: center;
-    background-size: 292px 302px;
+    background-position: -25px 0;
+    margin: 0 20px 0 0;
+    padding: 360px 0 0 0;
   }
 
   &--iphone-1 {
     @media (min-width: @desktop-width) {
       background-image: url("../img/iphone-img/iphone-screen-1-desktop@1x.png");
-    }
 
-    @media @retina {
-      background-image: url("../img/iphone-img/iphone-screen-1-desktop@2x.png");
+      @media @retina {
+        background-image: url("../img/iphone-img/iphone-screen-1-desktop@2x.png");
+        background-position: -25px 0;
+        background-size: 120% 54%;
+      }
     }
   }
 
   &--iphone-2 {
     @media (min-width: @desktop-width) {
       background-image: url("../img/iphone-img/iphone-screen-2-desktop@1x.png");
-    }
 
-    @media @retina {
-      background-image: url("../img/iphone-img/iphone-screen-2-desktop@2x.png");
+      @media @retina {
+        background-image: url("../img/iphone-img/iphone-screen-2-desktop@2x.png");
+        background-position: -25px 0;
+        background-size: 120% 54%;
+      }
     }
   }
 
   &--iphone-3 {
     @media (min-width: @desktop-width) {
       background-image: url("../img/iphone-img/iphone-screen-3-desktop@1x.png");
-    }
 
-    @media @retina {
-      background-image: url("../img/iphone-img/iphone-screen-3-desktop@2x.png");
+      @media @retina {
+        background-image: url("../img/iphone-img/iphone-screen-3-desktop@2x.png");
+        background-position: -25px 0;
+        background-size: 120% 54%;
+      }
     }
   }
 }
@@ -110,19 +120,27 @@
   font-weight: 700;
   font-size: 18px;
   color: @black;
-  margin: 43px 0 12px 0;
+  margin: 0 0 12px 0;
 
   @media (min-width: @desktop-width) {
-    margin: 0 0 24px 0;
     font-size: 30px;
+    margin: 0 0 20px 0;
   }
 }
 
 .presentation-app__text {
   margin: 0;
 
-  @media (min-width: @tablet-width) {
-    margin: 12px 0 16px 0;
+  &--show-tablet {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
   }
 
   @media (min-width: @desktop-width) {

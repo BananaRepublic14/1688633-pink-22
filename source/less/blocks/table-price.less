@@ -9,11 +9,12 @@
 
 .table-price__title {
   position: relative;
-  padding: 17px 0 21px 0;
-  border-right: 2px solid @lightgray;
   font-size: 18px;
   color: @white;
   background-color: @dark-blue;
+  border-right: 2px solid @lightgray;
+  padding: 12px 0 26px 0;
+  overflow: hidden;
 
   @media (min-width: @tablet-width) {
     padding: 10px 0 8px 0;
@@ -38,53 +39,37 @@
     border-right-color: @dark-blue;
   }
 
+  &--hit::before {
+    content: attr(data-hit-text);
+    position: absolute;
+    top: 17px;
+    left: -26px;
+    width: 105px;
+    height: 25px;
+    font-size: 14px;
+    line-height: 30px;
+    background-color: @pink;
+    transform: rotate(-45deg);
+
+    @media (min-width: @tablet-width) {
+      width: 85px;
+      top: 10px;
+      left: -24px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 120px;
+      top: 16px;
+      left: -30px;
+    }
+  }
+
   // Альтернативный способ
   // &--hit {
   //   background-image: url("../../img/svg-img/hit.svg");
   //   background-position: 0 0;
   //   background-repeat: no-repeat;
   // }
-
-  &--hit {
-    background-image: url("../img/svg-img/hit-mobile.svg");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-
-    @media (min-width: @tablet-width) {
-      background-image: url("../img/svg-img/hit-tablet.svg");
-      background-position: -7px 0;
-    }
-
-    @media (min-width: @desktop-width) {
-      background-image: url("../img/svg-img/hit-desktop.svg");
-    }
-  }
-
-  &--hit::before {
-    content: attr(data-hit-text);
-    position: absolute;
-    top: 14px;
-    left: 14px;
-    transform: rotate(-45deg);
-    font-size: 14px;
-    font-weight: 400;
-    color: @white;
-
-    @media (min-width: @tablet-width) {
-      top: 3px;
-      left: 7px;
-    }
-
-    @media (min-width: @desktop-width) {
-      top: 9px;
-      left: 12px;
-    }
-  }
-
-  &--hit::after {
-    content: "";
-    background-color: @pink;
-  }
 }
 
 .table-price__tariff,
@@ -94,10 +79,7 @@
 
 .table-price__tariff {
   font-weight: 700;
-
-  @media (min-width: @tablet-width) {
-    font-size: 16px;
-  }
+  font-size: 16px;
 
   @media (min-width: @desktop-width) {
     font-size: 18px;
@@ -106,11 +88,7 @@
 
 .table-price__value {
   font-weight: 300;
-  font-size: 24px;
-
-  @media (min-width: @tablet-width) {
-    font-size: 18px;
-  }
+  font-size: 18px;
 
   @media (min-width: @desktop-width) {
     font-size: 24px;
@@ -124,12 +102,12 @@
   background-color: @white;
 
   @media (min-width: @tablet-width) {
-    padding: 7px 20px 8px;
+    padding: 8px 15px;
     width: 25%;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 14px 20px 15px;
+    padding: 14px 20px;
   }
 
   &:first-child {
@@ -138,12 +116,11 @@
 
     @media (min-width: @tablet-width) {
       display: table-cell;
-      padding: 0 14px;
       text-transform: none;
     }
 
     @media (min-width: @desktop-width) {
-      padding: 0 21px;
+      padding: 15px 20px;
       font-size: 18px;
     }
   }

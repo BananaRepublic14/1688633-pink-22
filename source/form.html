@@ -12,8 +12,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body class="page-body">
-  <header class="header header-form header-form--closed">
+<body class="page-body show-menu">
+  <header class="header header-form">
     <h1 class="visually-hidden">Сайт мобильного приложения «PINK»</h1>
 
     <div class="header__navigation-wrapper">
@@ -32,10 +32,10 @@
               </svg>
             </a>
 
-            <button class="main-navigation__toggle main-navigation__toggle--closed" type="button" aria-label="Меню"></button>
+            <button class="main-navigation__toggle" type="button" aria-label="Меню"></button>
           </div>
 
-          <ul class="main-navigation__list main-navigation__list--closed list-reset">
+          <ul class="main-navigation__list list-reset">
             <li class="main-navigation__item">
               <a class="main-navigation__link" href="index.html">
                 Главная
@@ -62,7 +62,7 @@
     </div>
 
     <div class="header__titles">
-      <h2 class="header__subject">Конкурс на самое безбашенное путешествие с Пинк</h2>
+      <h2 class="header__subject header__subject--form">Конкурс на самое безбашенное путешествие с Пинк</h2>
     </div>
 
   </header>
@@ -73,8 +73,8 @@
     <form class="form" action="https://echo.htmlacademy.ru" method="POST">
       <div class="container">
 
-        <h3 class="form__title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную
-          карту!&thinsp;<span class="form__table-show">Пожалуйста, заполните форму ниже:</span></h3>
+        <p class="form__title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную
+          карту! <span class="form__table-show">Пожалуйста, заполните форму ниже:</span></p>
 
         <div class="form__container grid-form">
           <div class="form-data">
@@ -194,7 +194,7 @@
     </form>
   </main>
 
-  <footer class="footer">
+  <footer class="footer footer--form">
     <div class="container">
       <div class="footer__wrapper">
         <a class="footer__logo" aria-label="Логотип сайта Pink">
@@ -234,8 +234,8 @@
         </div>
 
         <div class="footer__copyright">
+          <p class="footer__copyright-text">Разработано</p>
           <a class="footer__copyright-link" href="https://htmlacademy.ru" aria-label="Логотип HTML Academy" target="_blank">
-            <b class="footer__copyright-text">Разработано</b>
             <svg class="footer__copyright-icon" width="27" height="34">
               <use xlink:href="img/logo/logo-html-academy.svg#logo-html-academy"></use>
             </svg>
