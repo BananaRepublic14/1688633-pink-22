@@ -15,7 +15,7 @@
   font-weight: 300;
   font-size: 24px;
   line-height: 29px;
-  margin: 0 0 34px 0;
+  margin: 0 0 31px 0;
 
   @media (min-width: @tablet-width) {
     font-size: 40px;
@@ -57,8 +57,8 @@
   margin: 0 0 17px 0;
 
   &:last-child {
-    margin: 0;
     flex-grow: 1;
+    margin: 0;
   }
 
   @media (min-width: @tablet-width) {
@@ -67,7 +67,6 @@
 
   @media (min-width: @desktop-width) {
     flex-basis: 33%;
-    margin: 0;
   }
 }
 
@@ -120,14 +119,23 @@
     }
 
     @media (min-width: @desktop-width) {
-      top: 15px;
+      top: 6px;
       height: 103px;
       background-size: 100% 103px;
     }
   }
 }
 
-.contacts__map-image {
+.contacts__iframe {
   display: block;
   width: 100%;
+  height: 200px;
+
+  @media (min-width: @tablet-width) {
+    height: 374px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 493px;
+  }
 }

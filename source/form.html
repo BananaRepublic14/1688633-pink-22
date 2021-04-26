@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Мобильное приложение «PINK»</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicon/favicon-180.png">
@@ -104,27 +104,27 @@
               <legend class="form-achievement__legend">Ваши безбашенные достижения в путешествии</legend>
               <ul class="form-achievement__list list-reset">
                 <li class="form-achievement__item">
-                  <input class="visually-hidden form-achievement__input" type="checkbox" name="achievement-1" id="achievement-1-id" checked>
+                  <input class="visually-hidden form-achievement__input" type="checkbox" name="achievement" id="achievement-1-id" checked>
                   <label class="form-achievement__label" for="achievement-1-id">Сделал селфи с акулой</label>
                 </li>
                 <li class="form-achievement__item">
-                  <input class="visually-hidden form-achievement__input" type="checkbox" name="achievement-2" id="achievement-2-id" checked>
+                  <input class="visually-hidden form-achievement__input" type="checkbox" name="achievement" id="achievement-2-id" checked>
                   <label class="form-achievement__label" for="achievement-2-id">Обгорел на пляже</label>
                 </li>
                 <li class="form-achievement__item ">
-                  <input class="visually-hidden form-achievement__input" type="checkbox" name="achievement-3" id="achievement-3-id">
+                  <input class="visually-hidden form-achievement__input" type="checkbox" name="achievement" id="achievement-3-id">
                   <label class="form-achievement__label" for="achievement-3-id">Видел Чака Норриса</label>
                 </li>
                 <li class="form-achievement__item">
-                  <input class="visually-hidden form-achievement__input" type="checkbox" name="achievement-4" id="achievement-4-id">
+                  <input class="visually-hidden form-achievement__input" type="checkbox" name="achievement" id="achievement-4-id">
                   <label class="form-achievement__label" for="achievement-4-id">Накупил сувениров</label>
                 </li>
                 <li class="form-achievement__item">
-                  <input class="visually-hidden form-achievement__input" type="checkbox" name="achievement-5" id="achievement-5-id" checked>
-                  <label class="form-achievement__label" for="achievement-2-id">Удержал башню</label>
+                  <input class="visually-hidden form-achievement__input" type="checkbox" name="achievement" id="achievement-5-id" checked>
+                  <label class="form-achievement__label" for="achievement-5-id">Удержал башню</label>
                 </li>
                 <li class="form-achievement__item">
-                  <input class="visually-hidden form-achievement__input" type="checkbox" name="achievement-6" id="achievement-6-id">
+                  <input class="visually-hidden form-achievement__input" type="checkbox" name="achievement" id="achievement-6-id">
                   <label class="form-achievement__label" for="achievement-6-id">Разгромил отель</label>
                 </li>
               </ul>
@@ -245,12 +245,13 @@
     </div>
   </footer>
 
-  <!-- Popups -->
+  <!-- popups -->
 
-  <div class="form-popup form-popup--error">
+  <div class="form-popup form-popup--toggle">
     <div class="form-popup__top">
-      <p class="form-popup__title">Что-то пошло не так!</p>
-      <p class="form-popup__text">Проверьте поля, выделенные красным, скорее вы забыли их заполнить</p>
+      <p class="form-popup__title">Что-то пошло&nbsp;не так!</p>
+      <p class="form-popup__text">Проверьте поля, выделенные красным, скорее
+        всего&nbsp;вы&nbsp;забыли их заполнить.</p>
     </div>
 
     <div class="form-popup__bottom form-popup__bottom--error">
@@ -258,17 +259,20 @@
     </div>
   </div>
 
-  <div class="form-popup form-popup--verification">
+  <div class="form-popup">
     <div class="form-popup__top">
       <p class="form-popup__title form-popup__title--verification">Ваша заявка отправлена</p>
-      <p class="form-popup__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и
-        оповестим вас.</p>
+      <p class="form-popup__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и&nbsp;<br
+          class="form-popup__text--br-show">
+        оповестим
+        вас.</p>
     </div>
     <div class="form-popup__bottom form-popup__bottom--verification">
       <button class="form-popup__button form-popup__button--desktop-size button-form">Закрыть окно</button>
     </div>
   </div>
 
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>
