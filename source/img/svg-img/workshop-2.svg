@@ -1,4 +1,3 @@
-  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 43" id="workshop-2">
-    <path d="M33 18L15 0l-3 3 5 5L7 18a3 3 0 000 4l11 11a3 3 0 004 0l11-11a3 3 0 000-4zm-23 2l10-10 10 10H10zm28 3s-4 4-4 7a4 4 0 108 0c0-3-4-7-4-7zm10 17H0v3h48v-3z" fill="currentColor"></path>
-  </symbol>
-
+<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 43" id="workshop-2">
+  <path d="M33 18L15 0l-3 3 5 5L7 18a3 3 0 000 4l11 11a3 3 0 004 0l11-11a3 3 0 000-4zm-23 2l10-10 10 10H10zm28 3s-4 4-4 7a4 4 0 108 0c0-3-4-7-4-7zm10 17H0v3h48v-3z" fill="currentColor"></path>
+</symbol>
