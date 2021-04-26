@@ -85,6 +85,16 @@
   line-height: 33px;
   color: @pink;
   margin: 0;
+
+  &:focus,
+  &:hover {
+    color: @dark-blue;
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: fade(@dark-blue, 30%);
+  }
 }
 
 .contacts__maps {

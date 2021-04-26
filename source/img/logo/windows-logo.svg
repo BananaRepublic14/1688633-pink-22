@@ -1,8 +1,6 @@
-<svg width="0" height="0" style="display: none;">
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 41" id="windows-logo">
     <path d="M21 19.5H0V0h21v19.5z" fill="#F05423"></path>
     <path d="M44 19.5H23V0h21v19.5z" fill="#84C441"></path>
     <path d="M21 41H0V21.5h21V41z" fill="#2DABE2"></path>
     <path d="M44 41H23V21.5h21V41z" fill="#F9BC15"></path>
   </symbol>
-</svg>

@@ -100,20 +100,11 @@
     padding: 0 0 0 59px;
   }
 
-  &:hover::before {
-    border-color: @dark-blue;
-  }
-
-  &:active::before {
-    border-color: @pink;
-  }
-
   &::before {
     content: "";
     position: absolute;
     left: 7%;
     top: -7%;
-    // transform: translateY(-50%);
     width: 35px;
     height: 35px;
     border: 2px solid @lightgray;
@@ -148,6 +139,15 @@
 }
 
 .form-achievement__input {
+  &:focus + .form-achievement__label::before,
+  &:hover + .form-achievement__label::before {
+    border-color: @dark-blue;
+  }
+
+  &:active + .form-achievement__label::before {
+    border-color: @pink;
+  }
+
   &:checked + .form-achievement__label {
     &::after {
       content: "";
