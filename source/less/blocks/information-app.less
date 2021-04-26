@@ -58,7 +58,7 @@
   margin: 40px 0 0 0;
   padding: 0;
 
-  &--show-tablet {
+  &--br-show {
     display: none;
 
     @media (min-width: @tablet-width) {
@@ -71,6 +71,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    width: auto;
     margin: 87px 0 23px 0;
   }
 }
@@ -78,7 +79,7 @@
 .information-app__description {
   margin: 10px 0;
 
-  &--show-desktop {
+  &--br-show {
     display: none;
 
     @media (min-width: @desktop-width) {
@@ -89,10 +90,25 @@
   @media (min-width: @desktop-width) {
     font-size: 18px;
     line-height: 30px;
-    margin: 0;
+    margin: 0 0 30px 0;
   }
 }
 
 .information-app__link {
   color: @pink;
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  &:focus,
+  &:hover {
+    color: @dark-blue;
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: fade(@dark-blue, 30%);
+  }
 }

@@ -115,12 +115,14 @@
       left: 42px;
     }
   }
+}
 
-  & + .form-radiobox__label:hover::before {
-    border-color: @dark-blue;
-  }
+.form-radiobox__input:hover + .form-radiobox__label::before,
+.form-radiobox__input:focus + .form-radiobox__label::before {
+  border-color: @dark-blue;
+}
 
-  & + .form-radiobox__label:active::before {
-    border-color: @pink;
-  }
+.form-radiobox__input:active + .form-radiobox__label::before,
+.form-radiobox__input:active + .form-radiobox__label::after {
+  border-color: @pink;
 }

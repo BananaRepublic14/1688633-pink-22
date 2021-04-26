@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Мобильное приложение «PINK»</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicon/favicon-180.png">
@@ -71,7 +71,7 @@
 
     <section class="photo">
       <h2 class="visually-hidden">Галерея фотографий пользоватлей приложения</h2>
-      <p class="photo__title">Взгляните на фотографии, которые выкладывают пользователи! <br class="photo__title--show-desktop"> Видите, как
+      <p class="photo__title">Взгляните на фотографии, которые выкладывают пользователи! <br class="photo__title--br-show"> Видите, как
         не хватает
         ваших?
       </p>
@@ -102,8 +102,8 @@
               <time class="photo__date" datetime="2021-04-18T18:00">(5 минут назад)</time>
             </p>
 
-            <p class="photo__text photo__text--full">Прыгать или нет? Напишите в коментарии свой совет и <br
-                class="photo__text--show-tablet"> смотрите прямую
+            <p class="photo__text photo__text--full">Прыгать или нет? Напишите в комментарии свой совет и&nbsp;<br
+                class="photo__text--show-tablet">смотрите прямую
               трансляцию в перископе, задавайте свои вопросы!</p>
 
             <div class="photo__likes photo__likes--full">
@@ -295,9 +295,9 @@
             <a class="photo__link" href="#">
               <picture>
                 <source type="image/webp" media="(min-width: 1200px)"
-                  srcset="img/catalog-img/photo-wing-desktop@1x.webp 1x, img/content/photo-wing-desktop@2x.webp 2x">
+                  srcset="img/catalog-img/photo-wing-desktop@1x.webp 1x, img/catalog-img/photo-wing-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)"
-                  srcset="img/catalog-img/photo-wing-tablet@1x.webp 1x, img/content/photo-wing-tablet@2x.webp 2x">
+                  srcset="img/catalog-img/photo-wing-tablet@1x.webp 1x, img/catalog-img/photo-wing-tablet@2x.webp 2x">
                 <source type="image/webp"
                   srcset="img/catalog-img/photo-wing-mobile@1x.webp 1x, img/catalog-img/photo-wing-mobile@2x.webp 2x">
 
@@ -338,14 +338,13 @@
 
           <div class="workshop-photo__download-photo">
             <p class="visually-hidden">Выберите изображение для поста:</p>
-
             <input class="visually-hidden" type="file" name="file" id="input-file">
             <label for="input-file">
               <picture>
                 <source type="image/webp" media="(min-width: 1200px)"
-                  srcset="img/catalog-img/photo-road-desktop@1x.webp 1x, img/content/photo-road-desktop@2x.webp 2x">
+                  srcset="img/catalog-img/photo-road-desktop@1x.webp 1x, img/catalog-img/photo-road-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)"
-                  srcset="img/catalog-img/photo-road-tablet@1x.webp 1x, img/content/photo-road-tablet@2x.webp 2x">
+                  srcset="img/catalog-img/photo-road-tablet@1x.webp 1x, img/catalog-img/photo-road-tablet@2x.webp 2x">
                 <source type="image/webp"
                   srcset="img/catalog-img/photo-road-mobile@1x.webp 1x, img/catalog-img/photo-road-mobile@2x.webp 2x">
 
@@ -455,6 +454,7 @@
     </div>
   </footer>
 
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>

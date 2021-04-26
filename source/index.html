@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Мобильное приложение «PINK»</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicon/favicon-180.png">
@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body class="page-body show-menu">
+<body class="page-body">
   <header class="header">
     <h1 class="visually-hidden">Сайт мобильного приложения «PINK»</h1>
 
@@ -64,40 +64,42 @@
     <h2 class="visually-hidden">Скачать мобильное приложение «PINK»</h2>
 
     <div class="header__promo-app promo-app">
-      <div class="promo-app__content">
-        <h2 class="promo-app__title">Взгляните на жизнь иначе!</h2>
-        <button class="button-index promo-app__button" type="button">Скачать приложение</button>
-        <ul class="promo-app__list list-reset">
-          <li class="promo-app__item">
-            <a class="promo-app__link" href="https://www.apple.com/ru/ios/app-store/" aria-label="ios">
-              <svg width="47" height="56">
-                <use xlink:href="img/logo/apple-logo.svg#apple-logo"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="promo-app__item">
-            <a class="promo-app__link" href="https://play.google.com/store" aria-label="android">
-              <svg width="43" height="47">
-                <use xlink:href="img/logo/android-logo.svg#android-logo"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="promo-app__item">
-            <a class="promo-app__link" href="https://www.microsoft.com/ru-ru/store/apps/windows-phone" aria-label="windows">
-              <svg width="44" height="41">
-                <use xlink:href="img/logo/windows-logo.svg#windows-logo"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-        <p class="promo-app__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+      <div class="promo-app__wrapper">
+        <div class="promo-app__content">
+          <h2 class="promo-app__title">Взгляните на жизнь иначе!</h2>
+          <button class="button-index promo-app__button" type="button">Скачать приложение</button>
+          <ul class="promo-app__list list-reset">
+            <li class="promo-app__item">
+              <a class="promo-app__link" href="https://www.apple.com/ru/ios/app-store/" aria-label="ios">
+                <svg width="47" height="56">
+                  <use xlink:href="img/logo/apple-logo.svg#apple-logo"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="promo-app__item">
+              <a class="promo-app__link" href="https://play.google.com/store" aria-label="android">
+                <svg width="43" height="47">
+                  <use xlink:href="img/logo/android-logo.svg#android-logo"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="promo-app__item">
+              <a class="promo-app__link" href="https://www.microsoft.com/ru-ru/store/apps/windows-phone" aria-label="windows">
+                <svg width="44" height="41">
+                  <use xlink:href="img/logo/windows-logo.svg#windows-logo"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <p class="promo-app__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        </div>
       </div>
     </div>
   </header>
 
   <main class="main">
 
-    <div class="main-heading">
+    <div class=" main-heading">
       <p class="main-heading__title">Устали от серости мегаполиса?</p>
       <p class="main-heading__title">Нам есть, что вам<br>предложить!</p>
     </div>
@@ -137,9 +139,9 @@
             </svg>
           </div>
           <div class="information-app__content">
-            <h3 class="information-app__title">Эффект <br class="information-app__title--show-tablet"> на 24 часа!</h3>
-            <p class="information-app__description">Британские ученые провели исследования и доказали, что&nbsp;положительный эффект
-              от&nbsp;использования приложения <br class="information-app__description--show-desktop"> длится целые&nbsp;сутки!</p>
+            <h3 class="information-app__title">Эффект&nbsp;<br class="information-app__title--br-show">на 24 часа!</h3>
+            <p class="information-app__description">Британские ученые провели исследования и&nbsp;доказали, что&nbsp;положительный эффект
+              от&nbsp;использования приложения&nbsp; <br class="information-app__description--br-show"> длится целые&nbsp;сутки!</p>
             <a href="#" class="information-app__link">Узнать больше об исследовании</a>
           </div>
         </div>
@@ -337,16 +339,10 @@
       </div>
 
       <div class="contacts__maps">
-        <picture>
-          <source type="image/webp" media="(min-width: 1200px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 660px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
-
-          <source media="(min-width: 1200px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
-          <source media="(min-width: 660px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
-          <img class="contacts__map-image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x"
-            alt="Адрес офиса: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
-        </picture>
+        <iframe class="contacts__iframe"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.60362530567!2d30.320853351673637!3d59.93871916896525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1619365842248!5m2!1sru!2sru"
+          width="320" height="200" allowfullscreen="" loading="lazy">
+        </iframe>
       </div>
 
     </section>
@@ -402,6 +398,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="js/script.min.js"></script>
 
 </body>
 
