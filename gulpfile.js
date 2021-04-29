@@ -7,6 +7,7 @@ const autoprefixer = require("autoprefixer");
 const csso = require("postcss-csso");
 const rename = require("gulp-rename");
 const htmlmin = require("gulp-htmlmin");
+const cssmin = require("gulp-csso");
 const terser = require("gulp-terser");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
@@ -27,6 +28,7 @@ const styles = () => {
     .pipe(postcss([autoprefixer(), csso()]))
     .pipe(gcmq())
     .pipe(purgecss({ content: ["source/**/*.html"] }))
+    .pipe(cssmin())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
@@ -164,13 +166,26 @@ const watcher = () => {
   gulp.watch("source/*.html", gulp.series(html, reload));
 };
 
+// filesToMove
+
+const filesToMove = (move) => {
+  gulp
+    .src(["source/manifest.webmanifest"], {
+      base: "source",
+    })
+    .pipe(gulp.dest("build"));
+  move();
+};
+
+exports.filesToMove = filesToMove;
+
 // Build
 
 const build = gulp.series(
   clear,
   copy,
   optimizeImages,
-  gulp.parallel(styles, html, scripts, sprite, createWebp),
+  gulp.parallel(styles, html, scripts, sprite, createWebp, filesToMove),
   gulp.series(server, watcher)
 );
 
@@ -182,6 +197,6 @@ exports.default = gulp.series(
   clear,
   copy,
   copyImages,
-  gulp.parallel(styles, html, scripts, sprite, createWebp),
+  gulp.parallel(styles, html, scripts, sprite, createWebp, filesToMove),
   gulp.series(server, watcher)
 );

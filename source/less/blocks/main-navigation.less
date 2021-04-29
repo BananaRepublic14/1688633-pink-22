@@ -26,6 +26,12 @@
 .main-navigation__logo {
   display: flex;
   align-items: center;
+  position: relative;
+
+  &:focus svg {
+    color: @pink;
+    fill: @white;
+  }
 }
 
 .main-navigation__image {
@@ -38,13 +44,12 @@
       display: none;
     }
 
-    &:focus,
     &:hover {
       color: @pink;
     }
 
     &:active {
-      color: fade(@pink, 30%);
+      color: fade(@white, 30%);
     }
   }
 
@@ -59,13 +64,12 @@
       display: none;
     }
 
-    &:focus,
     &:hover {
       color: @pink;
     }
 
     &:active {
-      color: fade(@pink, 30%);
+      color: fade(@white, 30%);
     }
   }
 
@@ -76,14 +80,13 @@
       display: block;
     }
 
-    &:focus,
     &:hover {
       color: @pink;
     }
 
     &:active {
-      color: fade(@pink, 30%);
-      fill: fade(@pink, 30%);
+      color: fade(@white, 30%);
+      fill: fade(@white, 30%);
     }
   }
 }
@@ -151,6 +154,7 @@
     }
   }
 
+  &:focus,
   &:hover {
     color: @pink;
   }
@@ -200,13 +204,16 @@
     transform: translateY(-50%) rotate(-45deg);
   }
 
-  &:hover,
-  &:active {
+  &:focus::before,
+  &:focus::after,
+  &:hover::before,
+  &:hover::after {
     color: @pink;
   }
 
-  &:active {
-    opacity: 0.3;
+  &:active::after,
+  &:active::before {
+    color: fade(@pink, 30%);
   }
 
   @media (min-width: @desktop-width) {

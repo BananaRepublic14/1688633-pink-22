@@ -20,7 +20,7 @@
       <div class="container">
         <nav class="main-navigation">
           <div class="main-navigation__logo-wrapper">
-            <a class="main-navigation__logo" href="index.html" aria-label="Логотип сайта Pink">
+            <a class="main-navigation__logo" href="index.html" aria-label="Логотип сайта Pink" tabindex="1">
               <svg class="main-navigation__image main-navigation__image--mobile" width="74" height="23">
                 <use xlink:href="img/logo/logo-mobile.svg#logo-mobile"></use>
               </svg>
@@ -37,22 +37,22 @@
 
           <ul class="main-navigation__list list-reset">
             <li class="main-navigation__item">
-              <a class="main-navigation__link" href="index.html">
+              <a class="main-navigation__link" href="index.html" tabindex="2">
                 Главная
               </a>
             </li>
             <li class="main-navigation__item">
-              <a class="main-navigation__link" href="catalog.html">
+              <a class="main-navigation__link" href="catalog.html" tabindex="3">
                 Фотографии
               </a>
             </li>
             <li class="main-navigation__item">
-              <a class="main-navigation__link" href="#">
+              <a class="main-navigation__link" href="#" tabindex="4">
                 Конкурс
               </a>
             </li>
             <li class="main-navigation__item">
-              <a class="main-navigation__link" href="https://htmlacademy.ru/" target="_blank">
+              <a class="main-navigation__link" href="https://htmlacademy.ru/" tabindex="5" target="_blank">
                 HTML Academy
               </a>
             </li>
@@ -83,17 +83,17 @@
                 <li class="form-data__item">
                   <label class="form-data__label form__label" for="lastname">Фамилия:</label>
                   <input class="form-data__input form__input" type="text" id="lastname" name="lastname" placeholder="Укажите фамилию &#42;"
-                    required>
+                    tabindex="6" required>
                 </li>
                 <li class="form-data__item">
                   <label class="form-data__label form__label" for="firstname">Имя:</label>
                   <input class="form-data__input form__input" type="text" id="firstname" name="firstname"
-                    placeholder="Введите ваше имя &#42;" required>
+                    placeholder="Введите ваше имя &#42;" tabindex="7" required>
                 </li>
                 <li class="form-data__item">
                   <label class="form-data__label form__label" for="middlename">Отчество:</label>
-                  <input class="form-data__input form__input" type="text" id="middlename" name="middlename"
-                    placeholder="Ну и отчество тоже">
+                  <input class="form-data__input form__input" type="text" id="middlename" name="middlename" placeholder="Ну и отчество тоже"
+                    tabindex="8">
                 </li>
               </ul>
             </fieldset>
@@ -139,12 +139,12 @@
                 <li class="form-contacts__item form-contacts__item--contacts form-contacts__item--phone">
                   <label class="form-contacts__label form-contacts__label--contacts form__label" for="tel-id">Номер телефона</label>
                   <input class="form-contacts__input form__input" type="tel" name="tel" id="tel-id" pattern="+7[0-9]{3}-[0-9]{3}-[0-9]{3}"
-                    placeholder="Номер, пожалуйста">
+                    placeholder="Номер, пожалуйста" tabindex="12">
                 </li>
                 <li class="form-contacts__item form-contacts__item--contacts form-contacts__item--email">
                   <label class="form-contacts__label form__label" for="email-id">Адрес почты</label>
                   <input class="form-contacts__input form__input" type="text" name="email" id="email-id" placeholder="Введите почту &#42;"
-                    required>
+                    required tabindex="13">
                 </li>
               </ul>
             </fieldset>
@@ -155,15 +155,18 @@
               <legend class="form-radiobox__legend">С каким приложением путешествовали?</legend>
               <ul class="form-radiobox__list list-reset">
                 <li class="form-radiobox__item">
-                  <input class="visually-hidden form-radiobox__input" type="radio" name="radio" value="ios" id="ios-id" checked>
+                  <input class="visually-hidden form-radiobox__input" type="radio" name="radio" value="ios" id="ios-id" tabindex="9"
+                    checked>
                   <label class="form-radiobox__label" for="ios-id">Pink для iOS</label>
                 </li>
                 <li class="form-radiobox__item">
-                  <input class="visually-hidden form-radiobox__input" type="radio" name="radio" value="android" id="android-id">
+                  <input class="visually-hidden form-radiobox__input" type="radio" name="radio" value="android" id="android-id"
+                    tabindex="10">
                   <label class="form-radiobox__label" for="android-id">Pink на Android</label>
                 </li>
                 <li class="form-radiobox__item">
-                  <input class="visually-hidden form-radiobox__input" type="radio" name="radio" value="windows" id="windows-id">
+                  <input class="visually-hidden form-radiobox__input" type="radio" name="radio" value="windows" id="windows-id"
+                    tabindex="11">
                   <label class="form-radiobox__label" for="windows-id">Windows Phone</label>
                 </li>
               </ul>
@@ -197,7 +200,7 @@
   <footer class="footer footer--form">
     <div class="container">
       <div class="footer__wrapper">
-        <a class="footer__logo" aria-label="Логотип сайта Pink">
+        <a class="footer__logo" href="#" aria-label="Логотип сайта Pink">
           <svg class="footer__logo-image" width="145" height="40">
             <use xlink:href="img/logo/logo-footer.svg#logo-footer"></use>
           </svg>
@@ -224,7 +227,6 @@
             </li>
             <li class="social__item">
               <a class="social__link" href="https://www.youtube.com/" aria-label="youtube" target="_blank">
-
                 <svg class="social__youtube" width="15" height="13" focusable="false">
                   <use xlink:href="img/logo/youtube.svg#youtube"></use>
                 </svg>
