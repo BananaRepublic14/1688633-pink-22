@@ -105,6 +105,10 @@
 }
 
 .workshop-photo__crop-icon {
+  &:focus {
+    color: @pink;
+  }
+
   @media (min-width: @tablet-width) {
     position: relative;
     top: -4px;
@@ -163,7 +167,6 @@
 .workshop-photo__contrast-icon {
   color: fade(@dark-blue, 30%);
 
-  &:focus,
   &:hover {
     color: fade(@dark-blue, 50%);
   }
@@ -230,7 +233,6 @@
   align-items: center;
   margin: 0 auto;
   background-color: transparent;
-  outline: none;
   border: none;
   appearance: none;
 
@@ -278,7 +280,6 @@
   width: 240px;
   height: 2px;
   background-color: @black;
-  outline: none;
   border: none;
   appearance: none;
 }

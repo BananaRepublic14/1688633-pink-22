@@ -51,6 +51,11 @@
   @media (min-width: @tablet-width) {
     justify-self: start;
   }
+
+  &:focus svg {
+    color: @pink;
+    fill: @dark-blue;
+  }
 }
 
 .footer__logo-image {
@@ -60,7 +65,6 @@
   color: @dark-blue;
   fill: @pink;
 
-  &:focus,
   &:hover {
     color: @pink;
   }
@@ -79,7 +83,6 @@
     color: @dark-blue;
     fill: @pink;
 
-    &:focus,
     &:hover {
       color: @pink;
       fill: @dark-blue;
@@ -128,25 +131,16 @@
 }
 
 .footer__copyright-link {
-  &:focus,
-  &:hover {
+  &:focus svg,
+  &:hover svg {
     color: @dark-blue;
   }
 
-  &:active {
+  &:active svg {
     color: fade(@dark-blue, 30%);
   }
 }
 
 .footer__copyright-icon {
   color: @pink;
-
-  &:focus,
-  &:hover {
-    color: @dark-blue;
-  }
-
-  &:active {
-    color: fade(@dark-blue, 30%);
-  }
 }
