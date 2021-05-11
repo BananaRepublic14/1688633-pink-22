@@ -2,14 +2,6 @@
   "name": "pink-22",
   "private": true,
   "description": "Личный проект «Пинк» от HTML Academy",
-  "author": {
-    "name": "Мендигужаев Эльдар Артурович",
-    "email": "mendiguzhaevea@gmail.com",
-    "url": "https://htmlacademy.ru/profile/banana_republic"
-  },
-  "contributors": [
-    "Максим Петрищак (наставник) (https://htmlacademy.ru/profile/maksim_petrishchak)"
-  ],
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "^10.2.5",

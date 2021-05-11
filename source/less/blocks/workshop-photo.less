@@ -99,9 +99,9 @@
   padding: 0;
   background-color: transparent;
 
-  // @media (min-width: @tablet-width) {
-  //   pointer-events: none;
-  // }
+  &--active svg {
+    color: @pink;
+  }
 }
 
 .workshop-photo__crop-icon {
@@ -251,6 +251,10 @@
   background-color: @pink;
 }
 
+.workshop-photo__range-input:focus::-webkit-slider-thumb {
+  background-color: @pink;
+}
+
 .workshop-photo__range-input::-moz-range-thumb:active {
   background-color: @pink;
 }
@@ -277,7 +281,7 @@
 }
 
 .workshop-photo__range-input::-moz-range-track {
-  width: 240px;
+  width: inherit;
   height: 2px;
   background-color: @black;
   border: none;
@@ -356,7 +360,7 @@
   }
 
   &:active {
-    color: @white;
+    color: fade(@white, 30%);
     background-color: fade(@dark-blue, 30%);
     border: none;
   }
