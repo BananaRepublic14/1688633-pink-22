@@ -185,8 +185,7 @@ const build = gulp.series(
   clear,
   copy,
   optimizeImages,
-  gulp.parallel(styles, html, scripts, sprite, createWebp, filesToMove),
-  gulp.series(server, watcher)
+  gulp.parallel(styles, html, scripts, sprite, createWebp, filesToMove)
 );
 
 exports.build = build;

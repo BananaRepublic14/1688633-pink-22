@@ -12,5 +12,3 @@ navToggle.addEventListener("click", () => {
     showMenu.classList.add("show-menu");
   }
 });
-
-// popups

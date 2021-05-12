@@ -101,6 +101,10 @@
 
   &--active svg {
     color: @pink;
+
+    @media (min-width: @tablet-width) {
+      color: fade(@dark-blue, 30%);
+    }
   }
 }
 
