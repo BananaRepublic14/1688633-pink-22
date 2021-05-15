@@ -101,10 +101,6 @@
 
   &--active svg {
     color: @pink;
-
-    @media (min-width: @tablet-width) {
-      color: fade(@dark-blue, 30%);
-    }
   }
 }
 
@@ -199,6 +195,7 @@
   flex-grow: 1;
   display: none;
   position: relative;
+  pointer-events: none;
 
   &::after {
     content: "";
@@ -227,6 +224,7 @@
 
   &--active {
     display: block;
+    pointer-events: auto;
   }
 }
 
@@ -260,6 +258,10 @@
 }
 
 .workshop-photo__range-input::-moz-range-thumb:active {
+  background-color: @pink;
+}
+
+.workshop-photo__range-input:focus::-moz-range-thumb {
   background-color: @pink;
 }
 

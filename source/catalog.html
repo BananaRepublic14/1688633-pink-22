@@ -4,6 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title>Мобильное приложение «PINK»</title>
+  <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/opensanslight.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
@@ -359,17 +362,18 @@
 
             <div class="workshop-photo__filter">
               <div class="workshop-photo__filter-buttons">
-                <button data-filter="1" type="button" class="workshop-photo__filter-button workshop-photo__filter-button--active">
+                <button data-filter="1" type="button" aria-label="Обрезать"
+                  class="workshop-photo__filter-button workshop-photo__filter-button--active">
                   <svg class="workshop-photo__crop-icon" width="44" height="44">
                     <use xlink:href="img/svg-img/workshop-1.svg#workshop-1"></use>
                   </svg>
                 </button>
-                <button data-filter="2" type="button" class="workshop-photo__filter-button">
+                <button data-filter="2" type="button" aria-label="Закрасить" class="workshop-photo__filter-button">
                   <svg class="workshop-photo__fill-icon" width="48" height="43">
                     <use xlink:href="img/svg-img/workshop-2.svg#workshop-2"></use>
                   </svg>
                 </button>
-                <button data-filter="3" type="button" class="workshop-photo__filter-button">
+                <button data-filter="3" type="button" aria-label="Контрастность" class="workshop-photo__filter-button">
                   <svg class="workshop-photo__contrast-icon" width="32" height="32">
                     <use xlink:href="img/svg-img/workshop-3.svg#workshop-3"></use>
                   </svg>
